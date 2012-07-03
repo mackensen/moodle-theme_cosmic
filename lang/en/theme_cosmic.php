@@ -26,3 +26,4 @@
 
 $string['pluginname'] = 'Cosmic';
 $string['choosereadme'] = 'This theme extends the Rocket theme with Lafayette College-specific customizations.';
+$string['editmode'] = 'Edit mode';
