@@ -25,19 +25,15 @@
  */
 
 $THEME->name = 'cosmic';
-$THEME->parents = array('rocket');
+
+$THEME->parents = array('rocket','base');
+
 $THEME->sheets = array(
-    'core',     /** Must come first**/
-    'admin',
-    'blocks',
-    'calendar',
-    'course',
-    'user',
-    'dock',
-    'grade',
-    'message',
-    'modules',
-    'question',
-    'css3'      /** Sets up CSS 3 + browser specific styles **/
+    'cosmic'
 );
+
 $THEME->enable_dock = true;
+
+$THEME->csspostprocess = 'rocket_process_css';
+
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';
