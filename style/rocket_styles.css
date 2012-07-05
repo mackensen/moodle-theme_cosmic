@@ -1,3 +1,20 @@
+/* @group Lafayette-specific fixes */
+/*Fixes the white header color when viewed in the grader*/
+
+.path-grade-report-grader table {
+background-color:#822433;
+}
+
+/* This class doesn't look to be defined anywhere in Rocket */
+/* This fix pushes the profile picture more to the right so it doesn't get cut off*/
+
+.userprofile {
+margin-left:35px;
+}
+
+/* @end */
+
+
 /* @group Core */
 
 a:visited {
