@@ -1,3 +1,11 @@
+.path-grade-report-grader table {
+    background-color: [[setting:themecolor]];
+}
+
+.userprofile {
+    margin-left: 35px;
+}
+
 .editing .course-content .main {
     background : inherit;
 }
