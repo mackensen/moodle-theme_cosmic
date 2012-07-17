@@ -32,6 +32,16 @@ $THEME->sheets = array(
     'cosmic'
 );
 
+$THEME->layouts = array(
+    // Main course page
+    'course' => array(
+        'file' => 'general.php',
+        'regions' => array('side-pre', 'side-post','search'),
+        'defaultregion' => 'side-post',
+        'options' => array('langmenu'=>true),
+    ),
+);
+
 $THEME->enable_dock = true;
 
 $THEME->csspostprocess = 'rocket_process_css';
