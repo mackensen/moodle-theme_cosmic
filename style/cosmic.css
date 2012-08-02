@@ -51,22 +51,22 @@
     display: none;
  }
 
-#searchbox {
+#search {
     width: 0px;
 }
 
-#searchbox .block_myprofile .header,
-#searchbox .block_myprofile .footer {
+#search .block_myprofile .header,
+#search .block_myprofile .footer {
     display: none;
 }
 
-#searchbox .block_myprofile .block {
+#search .block_myprofile .block {
     background: transparent;
 }
 
-#searchbox .block_myprofile .title h2,
-#searchbox .block_myprofile label,
-#searchbox .block_myprofile .block_action {
+#search .block_myprofile .title h2,
+#search .block_myprofile label,
+#search .block_myprofile .block_action {
     display: none;
 }
 
