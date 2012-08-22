@@ -36,6 +36,20 @@ $choices = array(
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
 
+// Set terminology for dropdown couse list
+$name = 'theme_cosmic/mycoursetitle';
+$title = get_string('mycoursetitle','theme_cosmic');
+$description = get_string('mycoursetitledesc', 'theme_cosmic');
+$default = 'course';
+$choices = array(
+        'course' => get_string('mycourses', 'theme_cosmic'),
+        'unit' => get_string('myunits', 'theme_cosmic'),
+        'class' => get_string('myclasses', 'theme_cosmic'),
+        'module' => get_string('mymodules', 'theme_cosmic')
+);
+$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+$settings->add($setting);
+
 // Logo file setting
 $name = 'theme_cosmic/logo';
 $title = get_string('logo','theme_cosmic');
