@@ -40,7 +40,7 @@ $settings->add($setting);
 $name = 'theme_cosmic/logo';
 $title = get_string('logo','theme_cosmic');
 $description = get_string('logodesc', 'theme_cosmic');
-$default = 'cosmic/pix/logo/lafayette-logo.png';
+$default = '';
 $setting = new admin_setting_configfile($name, $title, $description, $default);
 $settings->add($setting);
 
