@@ -16,6 +16,11 @@
  * Blocks
  */
 .block {
+    margin: 0px;
+}
+
+#region-pre .block,
+#region-post .block {
     margin : 20px;
     margin-top: 15px;
     margin-bottom: 0px;
