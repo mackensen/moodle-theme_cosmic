@@ -1,15 +1,20 @@
+/**
+ * Grader
+ */
 .path-grade-report-grader table {
     background-color: [[setting:themecolor]];
 }
 
+/**
+ * User profile
+ */
 .userprofile {
     margin-left: 35px;
 }
 
-.editing .course-content .main {
-    background : inherit;
-}
-
+/**
+ * Blocks
+ */
 .block {
     margin : 20px;
     margin-top: 15px;
@@ -51,6 +56,9 @@
     display: none;
  }
 
+/**
+ * Search
+ */
 #search {
     width: 0px;
 }
@@ -69,6 +77,13 @@
 #search .block_myprofile .block_action {
     display: none;
 }
+
+/**
+ * General
+ */
+.editing .course-content .main {
+    background : inherit;
+} 
 
 #region-main-pad {
     margin:15px 0px 0 520px;
@@ -131,6 +146,9 @@ a:visited {
     padding:7px 70px 0 0;
 }
 
+/**
+ * Navigation
+ */
 .breadcrumb {
     text-transform : uppercase;
     font-weight : bold;
