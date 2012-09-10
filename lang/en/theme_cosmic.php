@@ -145,3 +145,6 @@ $string['turneditingoff'] = 'On';
 $string['turneditingon'] = 'Off';
 $string['editmode'] = 'Edit mode is:';
 $string['edittoggle'] = 'click to toggle';
+
+$string['bootstrap'] = 'Bootstrap Stying - BETA';
+$string['bootstrapdesc'] = 'This feature will enable new Bootstrap styling. This project for moodle is headed by <a href="http://moodle.org/user/view.php?id=3152&course=5">David Scotson</a> and introduced into Rocket as a Beta status. Bootstrap is a project from Twitter that provides "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions." For more inofmration on Bootstrap <a href="http://twitter.github.com/bootstrap/">click here</a>.';
