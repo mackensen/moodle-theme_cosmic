@@ -158,6 +158,11 @@ a:visited {
     border-bottom: 3px solid #006699;
 }
 
+.redirectmessage,
+.continuebutton {
+    color: white;
+}
+
 /* Aligns the text "Edit Mode" to the center of the edit button */
 #editmode {
     padding:7px 70px 0 0;
