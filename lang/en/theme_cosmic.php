@@ -25,14 +25,21 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Cosmic';
-$string['region-side-post'] = 'Right';
-$string['region-side-pre'] = 'Left';
-$string['region-search'] = 'Search/Profile';
-$string['region-homeblock'] = 'Home Banner';
-$string['region-toplinks'] = 'Top Links';
+$string['allclasses'] = 'All Classes';
+$string['allcourses'] = 'All Courses';
+$string['allmodules'] = 'All Modules';
+$string['allunits'] = 'All Units';
+$string['autohidedesc'] = 'Enabling this feature will change how moodle looks when editing mode is turned on. Edit icons only appear when hovering over a particular item or block. This makes the interface alot cleaner and less intimidating.';
+$string['autohide'] = 'Autohide Functionality';
+$string['banner'] = 'Banner';
+$string['bannerdesc'] = 'Change the banner on the frontpage by entering the URL to a new one (i.e., http://www.somesite/banner.png). As a reference, the default banner is 750px by 250px.';
+$string['bannerheight'] = 'Homepage Banner Height';
+$string['bannerheightdesc'] = 'If you are using the Banner location on the homepage you can change its defult height here. The max is 250px.';
+$string['blocklinkcolor'] = 'Block Link Color';
+$string['blocklinkcolordesc'] = 'Change the color of the links in blocks';
+$string['bootstrap'] = 'Bootstrap Stying - BETA';
+$string['bootstrapdesc'] = 'This feature will enable new Bootstrap styling. This project for moodle is headed by <a href="http://moodle.org/user/view.php?id=3152&course=5">David Scotson</a> and introduced into Rocket as a Beta status. Bootstrap is a project from Twitter that provides "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions." For more inofmration on Bootstrap <a href="http://twitter.github.com/bootstrap/">click here</a>.';
 $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
-
 <h1>Cosmic</h1>
 <img src="rocket/pix/screenshot.jpg" />
 
@@ -59,92 +66,56 @@ $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
 <h2 Additional Footer Text</h2>
 <p>In the theme settings you can also adjust three additonal text fields. The \'Institution Name\' is hsown only on the homepage. This was added as often the name of thei organisation is different to the name of the Moodle site itself.</p>
 <p>';
-
 $string['configtitle'] = 'cosmic theme';
-
-$string['homeblock'] = 'banner';
-
-$string['logo'] = 'Logo';
-$string['logodesc'] = 'Change the logo of this theme by entering the URL to a new one (i.e., http://www.somesite/logo.png). As a reference, the default logo is 250px by 130px. A transparent .png will work best.';
-
-$string['footnote'] = 'Footnote';
-$string['footnotedesc'] = 'The content from this textarea will be displayed in the footer of every page. A great place for links.';
-
-$string['autohide'] = 'Autohide Functionality';
-$string['autohidedesc'] = 'Enabling this feature will change how moodle looks when editing mode is turned on. Edit icons only appear when hovering over a particular item or block. This makes the interface alot cleaner and less intimidating.';
-
-$string['editmodetoggle'] = 'Edit Mode Toggle';
-$string['edittoggledesc'] = 'When enabled this replaces the "Turn Editing On" button with a status toggle instead.';
-
-$string['enable'] = 'Enabled';
-$string['disable'] = 'Disabled';
-
-$string['mycoursetitle'] = 'Dropdown menu "My Course" Terminology';
-$string['mycoursetitledesc'] = 'Change the terminology for the "My Courses" link in the dropdown menu';
-$string['mycourses'] = 'My Courses';
-$string['myunits'] = 'My Units';
-$string['mymodules'] = 'My Modules';
-$string['myclasses'] = 'My Classes';
-$string['allcourses'] = 'All Courses';
-$string['allunits'] = 'All Units';
-$string['allmodules'] = 'All Modules';
-$string['allclasses'] = 'All Classes';
-
-$string['copyright'] = 'Copyright Notice';
-$string['copyrightdesc'] = 'This location is where you can put your copyright notice if you have one.';
-
-
-$string['sitename'] = 'Institution Name';
-$string['sitenamedesc'] = 'The name of your institution is shown on the frontpage. This is not the name of your site';
-
-$string['banner'] = 'Banner';
-$string['bannerdesc'] = 'Change the banner on the frontpage by entering the URL to a new one (i.e., http://www.somesite/banner.png). As a reference, the default banner is 750px by 250px.';
-
-$string['bannerheight'] = 'Homepage Banner Height';
-$string['nobanner'] = 'Disable Banner';
-$string['bannerheightdesc'] = 'If you are using the Banner location on the homepage you can change its defult height here. The max is 250px.';
-
-$string['themecolor'] = 'Theme Color';
-$string['themecolordesc'] = 'What color should your theme be. This will change mulitple components to produce the color you wish across the moodle site';
-
-$string['themetrimcolor'] = 'Theme Trim Color';
-$string['themetrimcolordesc'] = 'What color should your theme be. This will change mulitple components to produce the color you wish across the moodle site';
-
-$string['menucolor'] = 'Menu Color';
-$string['menucolordesc'] = 'Change the color of the menu';
-
 $string['contentlinkcolor'] = 'Content Link Color';
 $string['contentlinkcolordesc'] = 'Change the color of the links in content areas';
-
+$string['copyright'] = 'Copyright Notice';
+$string['copyrightdesc'] = 'This location is where you can put your copyright notice if you have one.';
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = 'For advanced users you can type in your own css here to override any of the theme defaults';
-
-$string['blocklinkcolor'] = 'Block Link Color';
-$string['blocklinkcolordesc'] = 'Change the color of the links in blocks';
-
+$string['disable'] = 'Disabled';
+$string['enable'] = 'Enabled';
+$string['editingmode'] = '<strong>Editing Mode is now enabled:</strong> Please hover over the topic, item or block you wish to edit. Drag and drop files onto course sections to upload them';
+$string['editmode'] = 'Edit mode is:';
+$string['editmodetoggle'] = 'Edit Mode Toggle';
+$string['edittoggle'] = 'click to toggle';
+$string['edittoggledesc'] = 'When enabled this replaces the "Turn Editing On" button with a status toggle instead.';
+$string['fixedwidth'] = 'Fixed Width';
+$string['footnote'] = 'Footnote';
+$string['footnotedesc'] = 'The content from this textarea will be displayed in the footer of every page. A great place for links.';
+$string['homeblock'] = 'banner';
+$string['logo'] = 'Logo';
+$string['logodesc'] = 'Change the logo of this theme by entering the URL to a new one (i.e., http://www.somesite/logo.png). As a reference, the default logo is 250px by 130px. A transparent .png will work best.';
+$string['menucolor'] = 'Menu Color';
+$string['menucolordesc'] = 'Change the color of the menu';
 $string['menuhovercolor'] = 'Menu Hover Color';
 $string['menuhovercolordesc'] = 'Change the color of the menu items when the mouse hovers over them';
-
-$string['menutrimcolor'] = 'Menu Trim Color';
-$string['menutrimcolordesc'] = 'Change the color used to trim the edges of the menu';
-
 $string['menulinkcolor'] = 'Menu Link Color';
 $string['menulinkcolordesc'] = 'Change the color used for links in the menu';
-
+$string['menutrimcolor'] = 'Menu Trim Color';
+$string['menutrimcolordesc'] = 'Change the color used to trim the edges of the menu';
+$string['myclasses'] = 'My Classes';
 $string['mycourses'] = 'My Courses';
-
+$string['mycoursetitle'] = 'Dropdown menu "My Course" Terminology';
+$string['mycoursetitledesc'] = 'Change the terminology for the "My Courses" link in the dropdown menu';
+$string['mymodules'] = 'My Modules';
+$string['myunits'] = 'My Units';
 $string['navigation'] = 'navigation';
-
-$string['editingmode'] = '<strong>Editing Mode is now enabled:</strong> Please hover over the topic, item or block you wish to edit. Drag and drop files onto course sections to upload them';
-
+$string['nobanner'] = 'Disable Banner';
+$string['pluginname'] = 'Cosmic';
+$string['region-homeblock'] = 'Home Banner';
+$string['region-search'] = 'Search/Profile';
+$string['region-side-post'] = 'Right';
+$string['region-side-pre'] = 'Left';
+$string['region-toplinks'] = 'Top Links';
 $string['screenwidth'] = 'Screen Width';
 $string['screenwidthdesc'] = 'This allows you to designate if this theme is displayed as a fixed with of 1000px or a variable width of 100%. <br> Please note that for design reasons the frontpage of the site will always remain fixed width';
-$string['fixedwidth'] = 'Fixed Width';
-$string['variablewidth'] = 'Variable Width';
+$string['sitename'] = 'Institution Name';
+$string['sitenamedesc'] = 'The name of your institution is shown on the frontpage. This is not the name of your site';
+$string['themecolor'] = 'Theme Color';
+$string['themecolordesc'] = 'What color should your theme be. This will change mulitple components to produce the color you wish across the moodle site';
+$string['themetrimcolor'] = 'Theme Trim Color';
+$string['themetrimcolordesc'] = 'What color should your theme be. This will change mulitple components to produce the color you wish across the moodle site';
 $string['turneditingoff'] = 'On';
 $string['turneditingon'] = 'Off';
-$string['editmode'] = 'Edit mode is:';
-$string['edittoggle'] = 'click to toggle';
-
-$string['bootstrap'] = 'Bootstrap Stying - BETA';
-$string['bootstrapdesc'] = 'This feature will enable new Bootstrap styling. This project for moodle is headed by <a href="http://moodle.org/user/view.php?id=3152&course=5">David Scotson</a> and introduced into Rocket as a Beta status. Bootstrap is a project from Twitter that provides "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions." For more inofmration on Bootstrap <a href="http://twitter.github.com/bootstrap/">click here</a>.';
+$string['variablewidth'] = 'Variable Width';
