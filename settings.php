@@ -28,7 +28,7 @@ $settings->add($setting);
 $name = 'theme_cosmic/edittoggle';
 $title = get_string('editmodetoggle','theme_cosmic');
 $description = get_string('edittoggledesc', 'theme_cosmic');
-$default = 'enable';
+$default = 'disable';
 $choices = array(
 	'enable' => get_string('enable', 'theme_cosmic'),
 	'disable' => get_string('disable', 'theme_cosmic')
@@ -70,7 +70,7 @@ $settings->add($setting);
 $name = 'theme_cosmic/bannerheight';
 $title = get_string('bannerheight','theme_cosmic');
 $description = get_string('bannerheightdesc', 'theme_cosmic');
-$default = 255;
+$default = 5;
 $choices = array(5=>get_string('nobanner', 'theme_cosmic'), 55=>'50px', 105=>'100px',155=>'150px', 205=>'200px', 255=>'250px',  305=>'300px',355=>'350px');
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
@@ -79,7 +79,7 @@ $settings->add($setting);
 $name = 'theme_cosmic/screenwidth';
 $title = get_string('screenwidth','theme_cosmic');
 $description = get_string('screenwidthdesc', 'theme_cosmic');
-$default = 1000;
+$default = 97;
 $choices = array(1000=>get_string('fixedwidth','theme_cosmic'), 97=>get_string('variablewidth','theme_cosmic'));
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
