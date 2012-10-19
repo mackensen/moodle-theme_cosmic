@@ -107,6 +107,11 @@
     overflow:hidden;
 }
 
+.headermenu,
+.langmenu {
+    clear: none;
+}
+
 #custommenu ul li {
     border: none;
 }
