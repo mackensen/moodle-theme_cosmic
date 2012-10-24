@@ -41,7 +41,7 @@ $string['bootstrap'] = 'Bootstrap Stying - BETA';
 $string['bootstrapdesc'] = 'This feature will enable new Bootstrap styling. This project for moodle is headed by <a href="http://moodle.org/user/view.php?id=3152&course=5">David Scotson</a> and introduced into Rocket as a Beta status. Bootstrap is a project from Twitter that provides "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions." For more information on Bootstrap <a href="http://twitter.github.com/bootstrap/">click here</a>.';
 $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
 <h1>Cosmic</h1>
-<img src="rocket/pix/screenshot.jpg" />
+<img src="cosmic/pix/screenshot.png" />
 
 <h2>About</h2>
 <p>Cosmic is a derivative of the Rocket theme, whose description follows below. Lafayette College tweaked it to suit various institutional needs.</p>
