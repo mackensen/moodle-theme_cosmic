@@ -44,6 +44,6 @@ $THEME->layouts = array(
 
 $THEME->enable_dock = true;
 
-$THEME->csspostprocess = 'rocket_process_css';
+$THEME->csspostprocess = 'cosmic_process_css';
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
