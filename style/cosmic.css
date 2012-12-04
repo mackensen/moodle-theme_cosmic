@@ -109,7 +109,7 @@
 
 .headermenu,
 .langmenu {
-    clear: none;
+    position: static;
 }
 
 #custommenu ul li {
