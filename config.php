@@ -29,7 +29,8 @@ $THEME->name = 'cosmic';
 $THEME->parents = array('rocket','base');
 
 $THEME->sheets = array(
-    'cosmic'
+    'cosmic',
+    'tablet'
 );
 
 $THEME->layouts = array(
