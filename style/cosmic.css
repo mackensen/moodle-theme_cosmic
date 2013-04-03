@@ -130,6 +130,10 @@ ul.dropdown span.customitem a:hover {
 
 }
 
+#custommenu ul.dropdown ul li {
+    margin-left: -400px;
+}
+
 a:link,
 a:visited {
     color: [[setting:contentlinkcolor]];
