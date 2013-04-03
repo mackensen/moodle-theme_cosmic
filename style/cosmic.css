@@ -110,6 +110,7 @@
 .headermenu,
 .langmenu {
     position: static;
+    text-align: inherit;
 }
 
 #custommenu ul li {
