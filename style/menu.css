@@ -115,7 +115,7 @@ ul.dropdown ul li {
 }
 
 ul.dropdown ul li:first-child {
-        border-top: 3px solid [[setting:menutrimcolor]];
+    border-top: 3px solid [[setting:menutrimcolor]];
 }
 
 

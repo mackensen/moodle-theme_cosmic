@@ -19,14 +19,14 @@
 }
 
 .forumpost .row.header .subject {
-        text-transform: uppercase;
-        color: [[setting:themecolor]];
-        font-weight: bold;
+    text-transform: uppercase;
+    color: [[setting:themecolor]];
+    font-weight: bold;
 }
 
 .forumpost .row.header .author {
-        font-size: .85em;
-        margin-top: 4px;
+    font-size: .85em;
+    margin-top: 4px;
 }
 
 .forumpost .picture img {
@@ -43,7 +43,7 @@
 }
 
 .forumpost .topic a:hover {
-        color: [[setting:themecolor]] ;
+    color: [[setting:themecolor]] ;
 }
 
 .path-mod-forum .forumheaderlist .discussion .starter {
@@ -77,8 +77,8 @@
 }
 
 .forumsearch {
-        border: 1px solid #000;
-        display: none;
+    border: 1px solid #000;
+    display: none;
 }
 
 /** Forum post colors **/
@@ -94,14 +94,14 @@ color: #fff;
 
 .forumpost img.userpicture,
 .forumheaderlist img.userpicture {
-        border: 1px solid #ddd;
-        background: #fff;
-        padding: 3px;
-        padding-bottom: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 3px;
+    padding-bottom: 10px;
 }
 
 .forumheaderlist {
-        font-size: .9em;
+    font-size: .9em;
 }
 
 /* @end */
@@ -109,36 +109,36 @@ color: #fff;
 /* @group Quiz */
 
 #page-mod-quiz-edit .questionbankwindow div.header {
-        background: [[setting:themecolor]];
+    background: [[setting:themecolor]];
 }
 
 #categoryquestions .questionnametext a,
 .qtype a {
-        color: #fff !important;
-        text-transform: uppercase;
+    color: #fff !important;
+    text-transform: uppercase;
 }
 
 #page-mod-quiz-edit div.questionbank {
-        background: #eee;
+    background: #eee;
 }
 
 #page-mod-quiz-edit div.question {
-        background: transparent;
-        border: 0px none;
+    background: transparent;
+    border: 0px none;
 }
 
 #page-mod-quiz-edit .reorder div.question div.content {
-        padding: 5px;
-        margin-bottom: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 #page-mod-quiz-edit div.question div.content .singlequestion .questionpreview,
 #page-mod-quiz-edit div.question div.content .singlequestion .questionpreview a {
-        background: transparent;
+    background: transparent;
 }
 
 .que .formulation {
-        background: transparent;
+    background: transparent;
 }
 
 /* @end */

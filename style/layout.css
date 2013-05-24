@@ -20,9 +20,9 @@ body {
 }
 
 #page-site-index #page-wrapper{
-        width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #page {
@@ -42,24 +42,24 @@ body {
     position:relative;    /* fixes IE7 overflow hidden bug stoping layout jumping out of place */
     clear:both;
     float:left;
-    width:100%;            /* width of whole page */
-    overflow:hidden;        /* This chops off any overhanging divs */
-    background: #f1f2f2;        /* Left column background colour */
+    width:100%;        /* width of whole page */
+    overflow:hidden;    /* This chops off any overhanging divs */
+    background: #f1f2f2;    /* Left column background colour */
 }
 #region-main-box {
     float:left;
     width:200%;
     position:relative;
     left:250px;
-    background: #fff;        /* Centre column background colour */
-        }
+    background: #fff;    /* Centre column background colour */
+    }
 #region-post-box {
     float:left;
     width:100%;
     position:relative;
     left:50%;
     margin-left: -500px;
-    background: #fff;        /* Right column background colour */
+    background: #fff;    /* Right column background colour */
 }
 #region-main-wrap {
     float: right;

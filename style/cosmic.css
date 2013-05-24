@@ -9,7 +9,7 @@ body {
 }
 
 #page-site-index {
-        background: url([[pix:theme|core/body_bg]]) [[setting:themecolor]] repeat-x 0 [[setting:bannerheight]];
+    background: url([[pix:theme|core/body_bg]]) [[setting:themecolor]] repeat-x 0 [[setting:bannerheight]];
 }
 
 h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
@@ -75,9 +75,9 @@ table {
 
 #page-header .logininfo,
 #page-header .logininfo a {
-        color: #fff;
-        margin-top: -50px;
-        font-size: 12px;
+    color: #fff;
+    margin-top: -50px;
+    font-size: 12px;
 }
 a.logo {
     background: url([[setting:logo]]) no-repeat 0 0;
@@ -104,10 +104,10 @@ a.logo {
 /* @group Homepage */
 
 #hometopblocks {
-        width: 100%;
-        background: transparent;
-        height: [[setting:bannerheight]];
-        vertical-align: middle;
+    width: 100%;
+    background: transparent;
+    height: [[setting:bannerheight]];
+    vertical-align: middle;
 }
 
 #toplinks {
@@ -204,21 +204,21 @@ a.logo {
 
 #dndupload-status,
 #editingmode {
-        text-align: center;
-        background: #006699;
-        color: #fff;
-        padding: 5px;
-        font-size: .9em;
-        border-bottom: 3px solid #006699;
+    text-align: center;
+    background: #006699;
+    color: #fff;
+    padding: 5px;
+    font-size: .9em;
+    border-bottom: 3px solid #006699;
 }
 
 #dndupload-status {
-        width: 100%;
-        margin-top: -1px;
+    width: 100%;
+    margin-top: -1px;
 }
 
 #editingmode {
-        display: none;
+    display: none;
 }
 
 /* @end */
@@ -298,24 +298,24 @@ div.jcontrolsright {
 }
 
 #coursesearchnavbar {
-        font-size: .8em;
-        margin-top: -3px;
-        text-align: left;
+    font-size: .8em;
+    margin-top: -3px;
+    text-align: left;
 }
 
 #coursesearchnavbar input {
-        float: left;
-        width: 100px;
-        margin: 0px;
-        margin-top: 5px;
-        font-size: 12px;
+    float: left;
+    width: 100px;
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 12px;
 }
 
 #coursesearchnavbar input[type="submit"] {
-        width: 35px;
-        padding: 8px;
-        padding-top: 4px;
-        height: 20px;
+    width: 35px;
+    padding: 8px;
+    padding-top: 4px;
+    height: 20px;
 }
 
 /* @end */
@@ -364,10 +364,10 @@ div.jcontrolsright {
 }
 
 #page-footer .footer-left #logo {
-        width: 100px;
-        height: 30px;
-        background: url([[pix:theme|footer/moodle-logo]]) no-repeat top left;
-        margin-top: 5px;
+    width: 100px;
+    height: 30px;
+    background: url([[pix:theme|footer/moodle-logo]]) no-repeat top left;
+    margin-top: 5px;
 }
 #page-footer .footer-right {
     float: right;
@@ -376,8 +376,8 @@ div.jcontrolsright {
 }
 
 .footer-right .copyright {
-        margin-top: -8px;
-        margin-bottom: -10px;
+    margin-top: -8px;
+    margin-bottom: -10px;
 }
 
 
@@ -693,30 +693,30 @@ body#page-course-view-topics.path-course div.moodle-dialogue-base div.yui3-widge
 /* @group Home_title */
 
 table#home_title {
-        border: 1px solid #dededf;
-        width: 100%;
-        color: #666666;
+    border: 1px solid #dededf;
+    width: 100%;
+    color: #666666;
 }
 
 table#home_title td {
-        padding-left: 10px;
+    padding-left: 10px;
 }
 
 table#home_title h1 {
-        color: [[setting:themetrimcolor]];
-        font-weight: normal;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-        margin-top: 5px;
+    color: [[setting:themetrimcolor]];
+    font-weight: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 table#home_title h2 {
-        color: [[setting:themecolor]];
-        font-weight: normal;
-        font-size: 1.2em;
-        margin-top: 0px;
-        margin-bottom: 5px;
+    color: [[setting:themecolor]];
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 /* @end */
@@ -724,41 +724,41 @@ table#home_title h2 {
 /* @group Home_info */
 
 table#home_info {
-        border: 1px solid #dededf;
-        width: 100%;
-        background: #f0f0f0;
-        color: #666;
-        font-size: .9em;
+    border: 1px solid #dededf;
+    width: 100%;
+    background: #f0f0f0;
+    color: #666;
+    font-size: .9em;
 }
 
 table#home_info td {
-        padding: 30px;
-        text-align: left;
-        vertical-align: top;
-        text-align: left !important;
+    padding: 30px;
+    text-align: left;
+    vertical-align: top;
+    text-align: left !important;
 }
 
 table#home_info img {
-        margin: -30px;
+    margin: -30px;
 }
 
 table#links {
-        border: 1px solid #dededf;
-        background: #fff;
-        width: 100%;
-        margin-bottom: -10px;
-        font-size: .9em;
+    border: 1px solid #dededf;
+    background: #fff;
+    width: 100%;
+    margin-bottom: -10px;
+    font-size: .9em;
 }
 
 table#links td {
-        padding: 10px;
+    padding: 10px;
 }
 
 table#links a {
-        background: [[setting:themecolor]];
-        color: #fff;
-        padding: 5px;
-        border: 1px solid #dededf;
+    background: [[setting:themecolor]];
+    color: #fff;
+    padding: 5px;
+    border: 1px solid #dededf;
 }
 /* @end */
 
@@ -766,128 +766,128 @@ table#links a {
 
 /* @group Performance Information */
 #page-footer .performanceinfo {
-        -moz-border-radius-topleft:15px;
-        -moz-border-radius-topright:15px;
-        -webkit-border-top-left-radius:15px 15px;
-        -webkit-border-top-right-radius:15px 15px;
-        bottom:0;
-        left:-290px !important;
-        position:fixed;
-        background-color:#444;
-        width:580px !important;
-        border-width:12px 12px medium;
-        margin:0 50% !important;
+    -moz-border-radius-topleft:15px;
+    -moz-border-radius-topright:15px;
+    -webkit-border-top-left-radius:15px 15px;
+    -webkit-border-top-right-radius:15px 15px;
+    bottom:0;
+    left:-290px !important;
+    position:fixed;
+    background-color:#444;
+    width:580px !important;
+    border-width:12px 12px medium;
+    margin:0 50% !important;
 }
 
 #page-footer .performanceinfo ul {
-        text-align: center; 
-        margin: 0 auto;
+    text-align: center; 
+    margin: 0 auto;
 }
 
 #page-footer .performanceinfo li{
-        display:block;
-        list-style-type:none;
-        float:left;
-        padding:5px 0;
-        width:25%;
+    display:block;
+    list-style-type:none;
+    float:left;
+    padding:5px 0;
+    width:25%;
 }
 
 #page-footer .performanceinfo li var{
-        font-size:1.3em;
-        font-weight:700;
+    font-size:1.3em;
+    font-weight:700;
 }
 
 #page-footer .performanceinfo .green{
-        color:#588E13 !important;
+    color:#588E13 !important;
 }
 
 #page-footer .performanceinfo .blue{
-        color: #4381c3;
+    color: #4381c3;
 }
 
 #page-footer .performanceinfo .purple{
-        color: #c052cf;
+    color: #c052cf;
 }
 
 #page-footer .performanceinfo .orange{
-        color: #e69b22;
+    color: #e69b22;
 }
 
 #page-footer .performanceinfo .red{
-        color: #df3b16;
+    color: #df3b16;
 }
 
 #page-footer .performanceinfo .white{
-        color:#FFF !important;
+    color:#FFF !important;
 }
 
 #page-footer .performanceinfo span{
-        color:#fff;
-        display: block;
+    color:#fff;
+    display: block;
 }
 /* @end */
 
 /* @group Login Page */
 
 #page-login-index {
-        background: [[setting:themecolor]];
-        padding-top: 20px;
-        margin: 0px;
-        height: 1000px;
+    background: [[setting:themecolor]];
+    padding-top: 20px;
+    margin: 0px;
+    height: 1000px;
 }
 
 #page-login-index #page {
-        width: 550px;
+    width: 550px;
 }
 
 #page-login-index #page-wrapper,
 #page-login-index #page,
 #page-login-index #page-content,
 #page-login-index #region-main-box {
-        background: transparent;
+    background: transparent;
 }
 
 .loginbox {
-        margin-left: auto;
-        margin-right: auto;
-        background: #fff;
-        border: 3px solid [[setting:themetrimcolor]];
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 3px solid [[setting:themetrimcolor]];
 }
 
 .loginbox .loginsub .desc {
-        line-height: 2em;
+    line-height: 2em;
 }
 
 .loginbox .loginform .form-label {
-        padding-bottom: 10px;
-        padding-top: 2px;
-        color: [[setting:themecolor]];
-        text-transform: uppercase;
+    padding-bottom: 10px;
+    padding-top: 2px;
+    color: [[setting:themecolor]];
+    text-transform: uppercase;
 }
 
 .loginbox .loginsub .forgetpass {
-        font-weight: 200;
-        text-transform: uppercase;
-        padding-top: 10px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding-top: 10px;
 }
 
 .loginbox .signuppanel .subcontent {
-        width: 90%;
+    width: 90%;
 }
 
 #page-login-index #page-wrapper h2 {
-        color: [[setting:themecolor]];
-        text-transform: uppercase;
-        font-weight: 200;
-        font-size: 1.6em;
+    color: [[setting:themecolor]];
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.6em;
 }
 
 #page-login-index #page-footer a{
-        color: #fff !important;
+    color: #fff !important;
 }
 
 #page-login-index #page-footer .footer-right {
-        color: #fff;
+    color: #fff;
 }
 
 /* @end */
@@ -895,7 +895,7 @@ table#links a {
 /* @group Calendar */
 
 .calendartable .today {
-        border: 1px dashed #ccc;
+    border: 1px dashed #ccc;
 }
 
 /* @end */
