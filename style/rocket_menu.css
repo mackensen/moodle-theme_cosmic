@@ -1,10 +1,10 @@
 /* Custom Menu
 -------------------------- */
 #menuwrap {
-	height: 36px;
-	background: [[setting:menucolor]];
-	width: 100%;
-	padding: 0px;
+        height: 36px;
+        background: [[setting:menucolor]];
+        width: 100%;
+        padding: 0px;
 }
 
 #custommenu {
@@ -101,7 +101,7 @@ ul.dropdown ul li {
 }
 
 ul.dropdown ul li:first-child {
-	border-top: 3px solid [[setting:menutrimcolor]];
+        border-top: 3px solid [[setting:menutrimcolor]];
 }
 
 

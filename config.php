@@ -140,7 +140,7 @@ $THEME->layouts = array(
 ///////////////////////////////////////////////////////////////
 
 $THEME->csspostprocess = 'rocket_process_css';
-	
+        
 ////////////////////////////////////////////////////
 // An array of stylesheets not to inherit from the
 // themes parents
@@ -175,7 +175,7 @@ $THEME->enable_dock = true;
 // As above but will be included in the page footer.
 ////////////////////////////////////////////////////
 
-$THEME->larrow = "<";	
+$THEME->larrow = "<";   
 
 ////////////////////////////////////////////////////
 // Overrides the left arrow image used throughout 
@@ -188,7 +188,7 @@ $THEME->larrow = "<";
 // Overrides the right arrow image used throughout Moodle
 ////////////////////////////////////////////////////
 
-// $THEME->layouts	
+// $THEME->layouts      
 
 ////////////////////////////////////////////////////
 // An array setting the layouts for the theme
@@ -201,7 +201,7 @@ $THEME->larrow = "<";
 // the themes parents
 ////////////////////////////////////////////////////
 
-// $THEME->parents_exclude_sheets	
+// $THEME->parents_exclude_sheets       
 
 ////////////////////////////////////////////////////
 // An array of stylesheets not to inherit from the
@@ -225,5 +225,5 @@ $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 // $THEME->resource_mp3player_colors
 
 ////////////////////////////////////////////////////
-// Controls the colours for the MP3 player 	
+// Controls the colours for the MP3 player      
 ////////////////////////////////////////////////////

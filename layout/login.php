@@ -104,7 +104,7 @@ echo $OUTPUT->doctype() ?>
 
         <div class="footer-right">
             <div class="copyright"><?php echo $PAGE->theme->settings->copyright; ?></div>
-			<?php echo $OUTPUT->login_info();?>
+                        <?php echo $OUTPUT->login_info();?>
         </div>
 
         <?php echo $OUTPUT->standard_footer_html(); ?>

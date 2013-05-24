@@ -18,8 +18,8 @@ $title = get_string('autohide','theme_rocket');
 $description = get_string('autohidedesc', 'theme_rocket');
 $default = 'enable';
 $choices = array(
-	'enable' => get_string('enable', 'theme_rocket'),
-	'disable' => get_string('disable', 'theme_rocket')
+        'enable' => get_string('enable', 'theme_rocket'),
+        'disable' => get_string('disable', 'theme_rocket')
 );
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
@@ -30,8 +30,8 @@ $title = get_string('editmodetoggle','theme_rocket');
 $description = get_string('edittoggledesc', 'theme_rocket');
 $default = 'enable';
 $choices = array(
-	'enable' => get_string('enable', 'theme_rocket'),
-	'disable' => get_string('disable', 'theme_rocket')
+        'enable' => get_string('enable', 'theme_rocket'),
+        'disable' => get_string('disable', 'theme_rocket')
 );
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
@@ -42,8 +42,8 @@ $title = get_string('bootstrap','theme_rocket');
 $description = get_string('bootstrapdesc', 'theme_rocket');
 $default = 'disable';
 $choices = array(
-	'enable' => get_string('enable', 'theme_rocket'),
-	'disable' => get_string('disable', 'theme_rocket')
+        'enable' => get_string('enable', 'theme_rocket'),
+        'disable' => get_string('disable', 'theme_rocket')
 );
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
@@ -54,10 +54,10 @@ $title = get_string('mycoursetitle','theme_rocket');
 $description = get_string('mycoursetitledesc', 'theme_rocket');
 $default = 'course';
 $choices = array(
-	'course' => get_string('mycourses', 'theme_rocket'),
-	'unit' => get_string('myunits', 'theme_rocket'),
-	'class' => get_string('myclasses', 'theme_rocket'),
-	'module' => get_string('mymodules', 'theme_rocket')
+        'course' => get_string('mycourses', 'theme_rocket'),
+        'unit' => get_string('myunits', 'theme_rocket'),
+        'class' => get_string('myclasses', 'theme_rocket'),
+        'module' => get_string('mymodules', 'theme_rocket')
 );
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);

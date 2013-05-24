@@ -20,9 +20,9 @@ body {
 }
 
 #page-site-index #page-wrapper{
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 #page {
@@ -52,7 +52,7 @@ body {
     position:relative;
     left:250px;
     background: #fff;        /* Centre column background colour */
-	}
+        }
 #region-post-box {
     float:left;
     width:100%;

@@ -91,7 +91,7 @@ if ($bootstrap == 'enable') {
 <?php } ?>
 <!-- END BOOTSTRAP STATUS CHECK -->
 
-	<?php echo $OUTPUT->standard_head_html() ?>
+        <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
@@ -102,8 +102,8 @@ if ($bootstrap == 'enable') {
     <div id="page-header">
         <?php if ($hasheading) { ?>
          <table style="width:100%; height:133px; margin: 0px;"><tr><td width="250px" style="margin:0px; padding:0px;">
-		 <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-		 </td><td valign="bottom" style="margin:0px; padding:0px;">
+                 <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
+                 </td><td valign="bottom" style="margin:0px; padding:0px;">
          <div class="headermenu"><?php
             if ($haslogininfo) {
                 echo $OUTPUT->login_info();
@@ -115,44 +115,44 @@ if ($bootstrap == 'enable') {
             ?></div>
         <?php } ?>
 <!-- START CUSTOMMENU -->
-	 <div id="navcontainer">
+         <div id="navcontainer">
         <?php if ($hascustommenu) { ?>
                 <div id="menuwrap"><div id="custommenu" class="javascript-disabled"><?php echo $custommenu; ?></div></div>
         <?php } ?>
 <!-- END OF CUSTOMMENU -->
     </td></tr></table>
-	</div>
+        </div>
     </div>
 <?php } ?>
 <!-- END OF HEADER -->
-	<div id="editingmode"><?php echo $editingmode ?></div>
+        <div id="editingmode"><?php echo $editingmode ?></div>
     <div id="page-content">
-	<div id="hometopblocks">
-		<div id="toplinks">
-			<?php if($hastoplinks) { ?>
-				<div class="region-content">
-					<?php echo $OUTPUT->blocks_for_region('toplinks') ?>
-				</div>
-			<?php } ?>
-		</div>
-		<div id="homeblock">
-			<?php if($hashomeblock) { ?>
-				<div class="region-content">
-					<?php echo $OUTPUT->blocks_for_region('homeblock') ?>
-				</div>
-			<?php } ?>
-		</div>
-	</div>
-	<div id="headerstrip">
-		<div id="search">
-			<?php if($hassearch) { ?>
-				<div class="region-content">
-					<?php echo $OUTPUT->blocks_for_region('search') ?>
-				</div>
-			<?php } ?>
-		</div>
-		<div id="sitename"><?php echo $PAGE->theme->settings->sitename; ?></div>
-	</div>
+        <div id="hometopblocks">
+                <div id="toplinks">
+                        <?php if($hastoplinks) { ?>
+                                <div class="region-content">
+                                        <?php echo $OUTPUT->blocks_for_region('toplinks') ?>
+                                </div>
+                        <?php } ?>
+                </div>
+                <div id="homeblock">
+                        <?php if($hashomeblock) { ?>
+                                <div class="region-content">
+                                        <?php echo $OUTPUT->blocks_for_region('homeblock') ?>
+                                </div>
+                        <?php } ?>
+                </div>
+        </div>
+        <div id="headerstrip">
+                <div id="search">
+                        <?php if($hassearch) { ?>
+                                <div class="region-content">
+                                        <?php echo $OUTPUT->blocks_for_region('search') ?>
+                                </div>
+                        <?php } ?>
+                </div>
+                <div id="sitename"><?php echo $PAGE->theme->settings->sitename; ?></div>
+        </div>
        <div id="region-main-box">
            <div id="region-post-box">
               <div id="region-main-wrap">
@@ -201,7 +201,7 @@ if ($bootstrap == 'enable') {
 
         <div class="footer-right">
             <div class="copyright"><?php echo $PAGE->theme->settings->copyright; ?></div>
-			<?php echo $OUTPUT->login_info();?>
+                        <?php echo $OUTPUT->login_info();?>
         </div>
 
         <?php echo $OUTPUT->standard_footer_html(); ?>

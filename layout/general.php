@@ -101,8 +101,8 @@ if ($bootstrap == 'enable') {
     <div id="page-header">
         <?php if ($hasheading) { ?>
          <table style="width:100%; height:133px; margin: 0px;"><tr><td width="250px" style="margin:0px; padding:0px;">
-		 <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-		 </td><td valign="bottom" style="margin:0px; padding:0px;">
+                 <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
+                 </td><td valign="bottom" style="margin:0px; padding:0px;">
          <div class="headermenu"><?php
             if ($haslogininfo) {
                 echo $OUTPUT->login_info();
@@ -114,44 +114,44 @@ if ($bootstrap == 'enable') {
             ?></div>
         <?php } ?>
 <!-- START CUSTOMMENU -->
-	 <div id="navcontainer">
+         <div id="navcontainer">
         <?php if ($hascustommenu) { ?>
                 <div id="menuwrap"><div id="custommenu" class="javascript-disabled"><?php echo $custommenu; ?></div></div>
         <?php } ?>
 <!-- END OF CUSTOMMENU -->
     </td></tr></table>
-	</div>
+        </div>
     </div>
 <?php } ?>
 <!-- END OF HEADER -->
    <div id="editingmode"><?php echo $editingmode ?></div>
 <div id="page-content">
 <!-- START NAVBAR -->
-	<div id="headerstrip">
-		<?php if($hassearch) { ?>
-			<div id="search">
-				<div class="region-content">
-					<?php echo $OUTPUT->blocks_for_region('search') ?>
-				</div>
-			</div>
-		<?php } ?>
-		<div class="jcontrolsleft">		
-			<?php if ($hasnavbar) { ?>
-			<div class="nav_title"><?php echo $navigation ?></div>
-			<div class="navbar clearfix">
+        <div id="headerstrip">
+                <?php if($hassearch) { ?>
+                        <div id="search">
+                                <div class="region-content">
+                                        <?php echo $OUTPUT->blocks_for_region('search') ?>
+                                </div>
+                        </div>
+                <?php } ?>
+                <div class="jcontrolsleft">             
+                        <?php if ($hasnavbar) { ?>
+                        <div class="nav_title"><?php echo $navigation ?></div>
+                        <div class="navbar clearfix">
 
-				<div class="breadcrumb"> <?php echo $OUTPUT->navbar();  ?></div>
-			</div>
-			<?php } ?>
-		</div>
-		<div id="ebutton">
-			<?php if ($hasnavbar) { 
-				echo $PAGE->button; 
-			} ?>
-		</div>
-	</div>
+                                <div class="breadcrumb"> <?php echo $OUTPUT->navbar();  ?></div>
+                        </div>
+                        <?php } ?>
+                </div>
+                <div id="ebutton">
+                        <?php if ($hasnavbar) { 
+                                echo $PAGE->button; 
+                        } ?>
+                </div>
+        </div>
 <!-- END NAVBAR -->
-	
+        
        <div id="region-main-box">
            <div id="region-post-box">
               <div id="region-main-wrap">
@@ -200,7 +200,7 @@ if ($bootstrap == 'enable') {
 
         <div class="footer-right">
             <div class="copyright"><?php echo $PAGE->theme->settings->copyright; ?></div>
-			<?php echo $OUTPUT->login_info();?>
+                        <?php echo $OUTPUT->login_info();?>
         </div>
 
         <?php echo $OUTPUT->standard_footer_html(); ?>

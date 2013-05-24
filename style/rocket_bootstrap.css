@@ -1794,7 +1794,7 @@ margin-left: 0px;
 }
 
 #fgroup_id_buttonar .fitemtitle {
-	width: 0px;
+        width: 0px;
 }
 
 table {
@@ -5712,11 +5712,11 @@ display: inline;
 }
 
 span.editinstructions{
-	position:relative;
-	top:-2px;
-	left:0px;
-	z-index:100;
-	border: none;
+        position:relative;
+        top:-2px;
+        left:0px;
+        z-index:100;
+        border: none;
         margin-bottom: 40px;
         margin-top: 0px;
 }
@@ -5724,27 +5724,27 @@ span.editinstructions{
 /* @group Custom Rocket Overrides */
 
 div.left.picture {
-	margin: 0px;
+        margin: 0px;
 }
 
 .forumpost .topic,
 .forumpost .row.maincontent,
 .forumpost .row.header {
-	background: transparent !important;
+        background: transparent !important;
 }
 
 .forumpost .row.maincontent {
-	padding: 10px;
+        padding: 10px;
 }
 
 div.forumpost {
-	padding: 0px;
-	padding-bottom: 10px;
-	margin-left: 0px;
+        padding: 0px;
+        padding-bottom: 10px;
+        margin-left: 0px;
 }
 
 .forumpost .row .left {
-	margin-left: 0px;
+        margin-left: 0px;
 }
 
 div.profilepicture a,
@@ -5765,16 +5765,16 @@ tr.discussion td.picture a,
 }
 
 .block input[type="text"] {
-	width: 100px;
-	margin-right: 5px;
+        width: 100px;
+        margin-right: 5px;
 }
 
 #adminsettings .form-item .form-label {
-	padding-right: 25px;
+        padding-right: 25px;
 }
 
 .settingsform {
-	margin-bottom: 10px;
+        margin-bottom: 10px;
 }
 
 /* @end */

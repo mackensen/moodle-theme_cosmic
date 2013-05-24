@@ -42,7 +42,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_menutrimcolor($css, $menutrimcolor);
 
-	// Set the custommenu link color
+        // Set the custommenu link color
     if (!empty($theme->settings->menulinkcolor)) {
         $menulinkcolor = $theme->settings->menulinkcolor;
     } else {
@@ -50,7 +50,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_menulinkcolor($css, $menulinkcolor);
 
-	// Set the content link color
+        // Set the content link color
     if (!empty($theme->settings->contentlinkcolor)) {
         $contentlinkcolor = $theme->settings->contentlinkcolor;
     } else {
@@ -58,7 +58,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_contentlinkcolor($css, $contentlinkcolor);
 
-	// Set the block link color
+        // Set the block link color
     if (!empty($theme->settings->blocklinkcolor)) {
         $blocklinkcolor = $theme->settings->blocklinkcolor;
     } else {
@@ -66,7 +66,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_blocklinkcolor($css, $blocklinkcolor);
     
-	// Set the background image for the logo 
+        // Set the background image for the logo 
     if (!empty($theme->settings->logo)) {
         $logo = $theme->settings->logo;
     } else {
@@ -74,7 +74,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_logo($css, $logo);
 
-	// Set the banner height
+        // Set the banner height
     if (!empty($theme->settings->bannerheight)) {
        $bannerheight = $theme->settings->bannerheight;
     } else {
@@ -82,7 +82,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_bannerheight($css,$bannerheight);
 
-	// Set the screenwidth
+        // Set the screenwidth
     if (!empty($theme->settings->screenwidth)) {
        $screenwidth = $theme->settings->screenwidth;
     } else {
@@ -90,7 +90,7 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_screenwidth($css,$screenwidth);
 
-	// Toggle AutoHide functionality
+        // Toggle AutoHide functionality
     if (!empty($theme->settings->autohide)) {
        $autohide = $theme->settings->autohide;
     } else {
@@ -114,8 +114,8 @@ function rocket_process_css($css, $theme) {
     }
     $css = rocket_set_banner($css, $banner);
 
-	// Allow for additional custom CSS from admins
-	if (!empty($theme->settings->customcss)) {
+        // Allow for additional custom CSS from admins
+        if (!empty($theme->settings->customcss)) {
         $customcss = $theme->settings->customcss;
     } else {
         $customcss = null;
@@ -208,25 +208,25 @@ function rocket_set_menutrimcolor($css, $menutrimcolor) {
 
 
 function rocket_set_logo($css, $logo) {
-	global $OUTPUT;  
-	$tag = '[[setting:logo]]';
-	$replacement = $logo;
-	if (is_null($replacement)) {
+        global $OUTPUT;  
+        $tag = '[[setting:logo]]';
+        $replacement = $logo;
+        if (is_null($replacement)) {
         $replacement = 'rocket/pix/logo/rocket.png';
     }
-	$css = str_replace($tag, $replacement, $css);
-	return $css;
+        $css = str_replace($tag, $replacement, $css);
+        return $css;
 }
 
 function rocket_set_banner($css, $banner) {
-	global $OUTPUT;  
-	$tag = '[[setting:banner]]';
-	$replacement = $banner;
-	if (is_null($replacement)) {
- 		$replacement = 'rocket/pix/banner/default.png';
- 	}
-	$css = str_replace($tag, $replacement, $css);
-	return $css;
+        global $OUTPUT;  
+        $tag = '[[setting:banner]]';
+        $replacement = $banner;
+        if (is_null($replacement)) {
+                $replacement = 'rocket/pix/banner/default.png';
+        }
+        $css = str_replace($tag, $replacement, $css);
+        return $css;
 }
 
 function rocket_set_bannerheight($css, $bannerheight) {
@@ -241,21 +241,21 @@ function rocket_set_bannerheight($css, $bannerheight) {
 
 function rocket_set_screenwidth($css, $screenwidth) {
     $tag = '[[setting:screenwidth]]';
-	$breadcrumbwidth = '[[setting:breadcrumbwidth]]';
-	$screenwidthmargintag = '[[setting:screenwidthmargintag]]';
+        $breadcrumbwidth = '[[setting:breadcrumbwidth]]';
+        $screenwidthmargintag = '[[setting:screenwidthmargintag]]';
     $replacement = $screenwidth;
     if (is_null($replacement)) {
         $replacement = '1000';
     }
     if ( $screenwidth == "1000" ) {
-		$css = str_replace($tag, $replacement.'px', $css);
-		$css = str_replace($screenwidthmargintag, ($replacement+5).'px', $css);
-		$css = str_replace($breadcrumbwidth, ($replacement-470).'px', $css);
-	}
-	if ( $replacement == "97" ) {
-		$css = str_replace($tag, $replacement.'%', $css);
-		$css = str_replace($breadcrumbwidth, '50%', $css);
-	}
+                $css = str_replace($tag, $replacement.'px', $css);
+                $css = str_replace($screenwidthmargintag, ($replacement+5).'px', $css);
+                $css = str_replace($breadcrumbwidth, ($replacement-470).'px', $css);
+        }
+        if ( $replacement == "97" ) {
+                $css = str_replace($tag, $replacement.'%', $css);
+                $css = str_replace($breadcrumbwidth, '50%', $css);
+        }
     return $css;
 }
 
@@ -266,7 +266,7 @@ function rocket_set_autohide($css, $autohide) {
         $replacement = 'enable';
     }
     $css = str_replace($tag, $replacement, $css);
-	return $css;
+        return $css;
 }
 
 function rocket_set_bootstrap($css, $bootstrap) {
@@ -276,7 +276,7 @@ function rocket_set_bootstrap($css, $bootstrap) {
         $replacement = 'disable';
     }
     $css = str_replace($tag, $replacement, $css);
-	return $css;
+        return $css;
 }
 
 function rocket_set_customcss($css, $customcss) {
@@ -300,10 +300,10 @@ function rocket_set_customcss($css, $customcss) {
  * @return string
  */
 function rocket_performance_output($param) {
-	
+        
     $html = '<div class="performanceinfo"><ul>';
-	if (isset($param['realtime'])) $html .= '<li><a class="red" href="#"><var>'.$param['realtime'].' secs</var><span>Load Time</span></a></li>';
-	if (isset($param['memory_total'])) $html .= '<li><a class="orange" href="#"><var>'.display_size($param['memory_total']).'</var><span>Memory Used</span></a></li>';
+        if (isset($param['realtime'])) $html .= '<li><a class="red" href="#"><var>'.$param['realtime'].' secs</var><span>Load Time</span></a></li>';
+        if (isset($param['memory_total'])) $html .= '<li><a class="orange" href="#"><var>'.display_size($param['memory_total']).'</var><span>Memory Used</span></a></li>';
     if (isset($param['includecount'])) $html .= '<li><a class="blue" href="#"><var>'.$param['includecount'].' Files </var><span>Included</span></a></li>';
     if (isset($param['dbqueries'])) $html .= '<li><a class="purple" href="#"><var>'.$param['dbqueries'].' </var><span>DB Read/Write</span></a></li>';
     $html .= '</ul></div>';

@@ -13,25 +13,25 @@ class theme_rocket_core_renderer extends core_renderer {
      */
     protected function render_custom_menu(custom_menu $menu) {
 
-		// Generate custom My Courses dropdown
+                // Generate custom My Courses dropdown
         $mycourses = $this->page->navigation->get('mycourses');
-		$mycoursetitle = $this->page->theme->settings-> mycoursetitle;
+                $mycoursetitle = $this->page->theme->settings-> mycoursetitle;
 
-		if (isloggedin() && $mycourses && $mycourses->has_children()) {
+                if (isloggedin() && $mycourses && $mycourses->has_children()) {
             $branchurl   = new moodle_url('/my/index.php');
             $branchsort  = 10000;
 
-			if ($mycoursetitle == 'module') {
-				$branchlabel = get_string('mymodules', 'theme_rocket');
-			} else if ($mycoursetitle == 'unit') {
-				$branchlabel = get_string('myunits', 'theme_rocket');
-			} else if ($mycoursetitle == 'class') {
-				$branchlabel = get_string('myclasses', 'theme_rocket');
-			} else {
-				$branchlabel = get_string('mycourses', 'theme_rocket');
-			}
+                        if ($mycoursetitle == 'module') {
+                                $branchlabel = get_string('mymodules', 'theme_rocket');
+                        } else if ($mycoursetitle == 'unit') {
+                                $branchlabel = get_string('myunits', 'theme_rocket');
+                        } else if ($mycoursetitle == 'class') {
+                                $branchlabel = get_string('myclasses', 'theme_rocket');
+                        } else {
+                                $branchlabel = get_string('mycourses', 'theme_rocket');
+                        }
 
-			$branchtitle = $branchlabel;
+                        $branchtitle = $branchlabel;
  
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
  
@@ -40,25 +40,25 @@ class theme_rocket_core_renderer extends core_renderer {
             }
 
         } else {
-        	if ($mycoursetitle == 'module') {
-				$branchlabel = get_string('allmodules', 'theme_rocket');
-			} else if ($mycoursetitle == 'unit') {
-				$branchlabel = get_string('allunits', 'theme_rocket');
-			} else if ($mycoursetitle == 'class') {
-				$branchlabel = get_string('allclasses', 'theme_rocket');
-			} else {
-				$branchlabel = get_string('allcourses', 'theme_rocket');
-			}
+                if ($mycoursetitle == 'module') {
+                                $branchlabel = get_string('allmodules', 'theme_rocket');
+                        } else if ($mycoursetitle == 'unit') {
+                                $branchlabel = get_string('allunits', 'theme_rocket');
+                        } else if ($mycoursetitle == 'class') {
+                                $branchlabel = get_string('allclasses', 'theme_rocket');
+                        } else {
+                                $branchlabel = get_string('allcourses', 'theme_rocket');
+                        }
 
-			$branchtitle = $branchlabel;
+                        $branchtitle = $branchlabel;
             $branchurl   = new moodle_url('/course/index.php');
             $branchsort  = 10000;
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);  
         }
 
-		
+                
 
-		// If the menu has no children return an empty string
+                // If the menu has no children return an empty string
         if (!$menu->has_children()) {
             return '';
         }
@@ -171,32 +171,32 @@ class theme_rocket_core_renderer extends core_renderer {
         return $content;
     }
 
-	/**
+        /**
      * Reformat edit button to new status indicator
      */
 
-	public function edit_button(moodle_url $url) {
-		
-		$edittoggle = 'enable';
+        public function edit_button(moodle_url $url) {
+                
+                $edittoggle = 'enable';
         if (!empty($this->page->theme->settings->edittoggle)) {
             $edittoggle = $this->page->theme->settings->edittoggle;
         }
         if ($edittoggle == 'enable') {
-			$url->param('sesskey', sesskey());
-			$formclose ='</span><div id="editmode">'.get_string('editmode', 'theme_rocket').'<div id="edittoggle">'.get_string('edittoggle', 'theme_rocket').'&nbsp;</div></div>';
-       	 	if ($this->page->user_is_editing()) {
-				$formopen = '<span id="editbuttonon">';
-				$url->param('edit', 'off');
-				$editstring = get_string('turneditingoff','theme_rocket');
-        	} else {
-            	$formopen ='<span id="editbuttonoff">';
-				$url->param('edit', 'on');
-            	$editstring = get_string('turneditingon','theme_rocket');
-        	}
-		return $formopen . $this->single_button($url, $editstring) . $formclose;
+                        $url->param('sesskey', sesskey());
+                        $formclose ='</span><div id="editmode">'.get_string('editmode', 'theme_rocket').'<div id="edittoggle">'.get_string('edittoggle', 'theme_rocket').'&nbsp;</div></div>';
+                if ($this->page->user_is_editing()) {
+                                $formopen = '<span id="editbuttonon">';
+                                $url->param('edit', 'off');
+                                $editstring = get_string('turneditingoff','theme_rocket');
+                } else {
+                $formopen ='<span id="editbuttonoff">';
+                                $url->param('edit', 'on');
+                $editstring = get_string('turneditingon','theme_rocket');
+                }
+                return $formopen . $this->single_button($url, $editstring) . $formclose;
 
-		} else {
-         	$url->param('sesskey', sesskey());
+                } else {
+                $url->param('sesskey', sesskey());
         if ($this->page->user_is_editing()) {
             $url->param('edit', 'off');
             $editstring = get_string('turneditingoff');
@@ -209,7 +209,7 @@ class theme_rocket_core_renderer extends core_renderer {
         }
     }
 
-	/**
+        /**
      * Outputs the page's footer
      * @return string HTML fragment
      */
