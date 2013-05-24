@@ -1,6 +1,6 @@
-/* Major portions of code written by Mark Ward (original author). 
-   Modifications and additions / forks by Mark Johnson and Danny Wahl. 
-   This CSS was compiled (I interleaved the code) by Frankie Kam 
+/* Major portions of code written by Mark Ward (original author).
+   Modifications and additions / forks by Mark Johnson and Danny Wahl.
+   This CSS was compiled (I interleaved the code) by Frankie Kam
    - April 2012*/
 
 #dndupload-status {
@@ -10,7 +10,7 @@
 .block .header .commands a img,
 .path-course-view .section .content li .commands a img,
 .path-course-view .section .content .summary a img.icon.edit{
-    opacity: 0.01;  
+    opacity: 0.01;
     filter: alpha(opacity=1);
     -o-transition: opacity 0.5s linear 0.3s;
     -moz-transition: opacity 0.5s linear 0.3s;
@@ -22,7 +22,7 @@
 .path-course-view .section .right.side a img,
 .path-course-view .section .right.side div img
 {
-    opacity: 0.01; 
+    opacity: 0.01;
     filter: alpha(opacity=1);
 }
 
@@ -76,9 +76,9 @@
 }
 
 /* The below section code was provided by Danny Wahl - April 2012*/
-/* It hides thee Add Resources and Add Activity selection dropdown lists until a 
+/* It hides thee Add Resources and Add Activity selection dropdown lists until a
    mouseover is done. A very nice effect! This greatly complements the work done
-   by Mark Ward and Mark Johnson. 
+   by Mark Ward and Mark Johnson.
 */
 
 .editing .block .section_add_menus, /* Add Resource/Activity dropdowns in blocks */

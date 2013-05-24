@@ -141,7 +141,7 @@ $THEME->layouts = array(
 ///////////////////////////////////////////////////////////////
 
 $THEME->csspostprocess = 'cosmic_process_css';
-        
+
 ////////////////////////////////////////////////////
 // An array of stylesheets not to inherit from the
 // themes parents
@@ -150,15 +150,15 @@ $THEME->csspostprocess = 'cosmic_process_css';
 $THEME->enable_dock = true;
 
 ////////////////////////////////////////////////////
-// Allows the user to provide the name of a function 
-// that all CSS should be passed to before being 
+// Allows the user to provide the name of a function
+// that all CSS should be passed to before being
 // delivered.
 ////////////////////////////////////////////////////
 
 // $THEME->filter_mediaplugin_colors
 
 ////////////////////////////////////////////////////
-// Used to control the colours used in the small 
+// Used to control the colours used in the small
 // media player for the filters
 ////////////////////////////////////////////////////
 
@@ -166,7 +166,7 @@ $THEME->enable_dock = true;
 
 ////////////////////////////////////////////////////
 // An array containing the names of JavaScript files
-// located in /javascript/ to include in the theme. 
+// located in /javascript/ to include in the theme.
 // (gets included in the head)
 ////////////////////////////////////////////////////
 
@@ -176,10 +176,10 @@ $THEME->enable_dock = true;
 // As above but will be included in the page footer.
 ////////////////////////////////////////////////////
 
-$THEME->larrow = "<";   
+$THEME->larrow = "<";
 
 ////////////////////////////////////////////////////
-// Overrides the left arrow image used throughout 
+// Overrides the left arrow image used throughout
 // Moodle
 ////////////////////////////////////////////////////
 
@@ -189,7 +189,7 @@ $THEME->larrow = "<";
 // Overrides the right arrow image used throughout Moodle
 ////////////////////////////////////////////////////
 
-// $THEME->layouts      
+// $THEME->layouts
 
 ////////////////////////////////////////////////////
 // An array setting the layouts for the theme
@@ -202,7 +202,7 @@ $THEME->larrow = "<";
 // the themes parents
 ////////////////////////////////////////////////////
 
-// $THEME->parents_exclude_sheets       
+// $THEME->parents_exclude_sheets
 
 ////////////////////////////////////////////////////
 // An array of stylesheets not to inherit from the
@@ -212,19 +212,19 @@ $THEME->larrow = "<";
 // $THEME->plugins_exclude_sheets
 
 ////////////////////////////////////////////////////
-// An array of plugin sheets to ignore and not 
+// An array of plugin sheets to ignore and not
 // include.
 ////////////////////////////////////////////////////
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
 ////////////////////////////////////////////////////
-// Sets a custom render factory to use with the 
+// Sets a custom render factory to use with the
 // theme, used when working with custom renderers.
 ////////////////////////////////////////////////////
 
 // $THEME->resource_mp3player_colors
 
 ////////////////////////////////////////////////////
-// Controls the colours for the MP3 player      
+// Controls the colours for the MP3 player
 ////////////////////////////////////////////////////

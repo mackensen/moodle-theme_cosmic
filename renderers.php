@@ -32,9 +32,9 @@ class theme_cosmic_core_renderer extends core_renderer {
                         }
 
                         $branchtitle = $branchlabel;
- 
+
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
- 
+
             foreach ($mycourses->children as $coursenode) {
                 $branch->add($coursenode->get_content(), $coursenode->action, $coursenode->get_title());
             }
@@ -53,10 +53,10 @@ class theme_cosmic_core_renderer extends core_renderer {
                         $branchtitle = $branchlabel;
             $branchurl   = new moodle_url('/course/index.php');
             $branchsort  = 10000;
-            $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);  
+            $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
         }
 
-                
+
 
                 // If the menu has no children return an empty string
         if (!$menu->has_children()) {
@@ -176,7 +176,7 @@ class theme_cosmic_core_renderer extends core_renderer {
      */
 
         public function edit_button(moodle_url $url) {
-                
+
                 $edittoggle = 'enable';
         if (!empty($this->page->theme->settings->edittoggle)) {
             $edittoggle = $this->page->theme->settings->edittoggle;
@@ -205,7 +205,7 @@ class theme_cosmic_core_renderer extends core_renderer {
             $editstring = get_string('turneditingon');
         }
 
-        return $this->single_button($url, $editstring);   
+        return $this->single_button($url, $editstring);
         }
     }
 
@@ -273,7 +273,7 @@ class theme_cosmic_core_renderer extends core_renderer {
         if(method_exists($this, 'theme_switch_links')) {
             $output .= $this->theme_switch_links();
         }
-        
+
        // if (!empty($CFG->debugpageinfo)) {
        //     $output .= '<div class="performanceinfo">This page is: ' . $this->page->debug_summary() . '</div>';
        // }

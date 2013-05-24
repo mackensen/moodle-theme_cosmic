@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-#region-pre .block, 
+#region-pre .block,
 #region-post .block {
     margin: 20px;
     margin-top: 15px;
@@ -210,7 +210,7 @@
     width: 205px !important;
 }
 
-.block_login input, 
+.block_login input,
 .block_login input select {
     background: #7e7f83;
     border: 1px solid #fff;

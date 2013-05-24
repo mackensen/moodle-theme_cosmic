@@ -135,7 +135,7 @@ if ($bootstrap == 'enable') {
                                 </div>
                         </div>
                 <?php } ?>
-                <div class="jcontrolsleft">             
+                <div class="jcontrolsleft">
                         <?php if ($hasnavbar) { ?>
                         <div class="nav_title"><?php echo $navigation ?></div>
                         <div class="navbar clearfix">
@@ -145,13 +145,13 @@ if ($bootstrap == 'enable') {
                         <?php } ?>
                 </div>
                 <div id="ebutton">
-                        <?php if ($hasnavbar) { 
-                                echo $PAGE->button; 
+                        <?php if ($hasnavbar) {
+                                echo $PAGE->button;
                         } ?>
                 </div>
         </div>
 <!-- END NAVBAR -->
-        
+
        <div id="region-main-box">
            <div id="region-post-box">
               <div id="region-main-wrap">

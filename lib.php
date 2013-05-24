@@ -8,7 +8,7 @@ function cosmic_process_css($css, $theme) {
         $themecolor = null;
     }
     $css = cosmic_set_themecolor($css, $themecolor);
-    
+
     // Set the theme trim color
     if (!empty($theme->settings->themetrimcolor)) {
         $themetrimcolor = $theme->settings->themetrimcolor;
@@ -16,7 +16,7 @@ function cosmic_process_css($css, $theme) {
         $themetrimcolor = null;
     }
     $css = cosmic_set_themetrimcolor($css, $themetrimcolor);
-    
+
     // Set the custommenu color
     if (!empty($theme->settings->menucolor)) {
         $menucolor = $theme->settings->menucolor;
@@ -24,7 +24,7 @@ function cosmic_process_css($css, $theme) {
         $menucolor = null;
     }
     $css = cosmic_set_menucolor($css, $menucolor);
-    
+
     // Set the custommenu hover color
     if (!empty($theme->settings->menuhovercolor)) {
         $menuhovercolor = $theme->settings->menuhovercolor;
@@ -32,7 +32,7 @@ function cosmic_process_css($css, $theme) {
         $menuhovercolor = null;
     }
     $css = cosmic_set_menuhovercolor($css, $menuhovercolor);
-    
+
     // Set the custommenu trim color
     if (!empty($theme->settings->menutrimcolor)) {
         $menutrimcolor = $theme->settings->menutrimcolor;
@@ -64,8 +64,8 @@ function cosmic_process_css($css, $theme) {
         $blocklinkcolor = null;
     }
     $css = cosmic_set_blocklinkcolor($css, $blocklinkcolor);
-    
-    // Set the background image for the logo 
+
+    // Set the background image for the logo
     if (!empty($theme->settings->logo)) {
         $logo = $theme->settings->logo;
     } else {
@@ -98,7 +98,7 @@ function cosmic_process_css($css, $theme) {
        $autohide = null;
     }
     //$css = cosmic_set_autohide($css,$autohide);
-    
+
     // Toggle Bootstrap functionality
     if (!empty($theme->settings->bootstrap)) {
        $bootstrap = $theme->settings->bootstrap;
@@ -106,8 +106,8 @@ function cosmic_process_css($css, $theme) {
        $bootstrap = null;
     }
     //$css = cosmic_set_bootstrap($css,$bootstrap);
-    
-    // Set the background image for the Banner 
+
+    // Set the background image for the Banner
     if (!empty($theme->settings->banner)) {
         $banner = $theme->settings->banner;
     } else {
@@ -208,7 +208,7 @@ function cosmic_set_menutrimcolor($css, $menutrimcolor) {
 }
 
 function cosmic_set_logo($css, $logo) {
-    global $OUTPUT;  
+    global $OUTPUT;
     $tag = '[[setting:logo]]';
     $replacement = $logo;
     if (is_null($replacement)) {
@@ -219,7 +219,7 @@ function cosmic_set_logo($css, $logo) {
 }
 
 function cosmic_set_banner($css, $banner) {
-    global $OUTPUT;  
+    global $OUTPUT;
     $tag = '[[setting:banner]]';
     $replacement = $banner;
     if (is_null($replacement)) {
@@ -305,7 +305,7 @@ function cosmic_set_customcss($css, $customcss) {
  * @return string
  */
 function cosmic_performance_output($param) {
-        
+
     $html = '<div class="performanceinfo"><ul>';
         if (isset($param['realtime'])) $html .= '<li><a class="red" href="#"><var>'.$param['realtime'].' secs</var><span>Load Time</span></a></li>';
         if (isset($param['memory_total'])) $html .= '<li><a class="orange" href="#"><var>'.display_size($param['memory_total']).'</var><span>Memory Used</span></a></li>';
@@ -324,7 +324,7 @@ class transmuted_custom_menu_item extends custom_menu_item {
     public function __construct(custom_menu_item $menunode) {
         parent::__construct($menunode->get_text(), $menunode->get_url(), $menunode->get_title(), $menunode->get_sort_order(), $menunode->get_parent());
         $this->children = $menunode->get_children();
- 
+
         $matches = array();
         if (preg_match('/^\[\[([a-zA-Z0-9\-\_\:]+)\]\]$/', $this->text, $matches)) {
             try {
@@ -333,7 +333,7 @@ class transmuted_custom_menu_item extends custom_menu_item {
                 $this->text = $matches[1];
             }
         }
- 
+
         $matches = array();
         if (preg_match('/^\[\[([a-zA-Z0-9\-\_\:]+)\]\]$/', $this->title, $matches)) {
             try {

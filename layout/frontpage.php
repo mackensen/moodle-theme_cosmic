@@ -66,7 +66,7 @@ echo $OUTPUT->doctype() ?>
 <head>
     <title><?php echo $PAGE->title ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
-    
+
 <!-- START AUTOHIDE STATUS CHECK -->
 <?php if (!empty($PAGE->theme->settings->autohide)) {
     $autohide = $PAGE->theme->settings->autohide;
