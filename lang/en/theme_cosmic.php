@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -16,14 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'theme_rocket', language 'en', branch 'MOODLE_20_STABLE'
+ * Strings for component 'theme_cosmic', language 'en'
  *
- * @package   moodlecore
- * @copyright 2011 Julian Ridden
+ * @package   theme_cosmic
+ * @copyright 2013 Lafayette College ITS
+ * @copyright 2011 Julian Ridden (original Rocket theme)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
  
-$string['pluginname'] = 'Rocket';
+$string['pluginname'] = 'Cosmic';
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 $string['region-search'] = 'Search/Profile';
@@ -31,33 +31,16 @@ $string['region-homeblock'] = 'Home Banner';
 $string['region-toplinks'] = 'Top Links';
 $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
 
-<h1>Rocket</h1>
-<img src="rocket/pix/screenshot.jpg" />
+<h1>Cosmic</h1>
+<img src="cosmic/pix/screenshot.jpg" />
 
 <h2>About</h2>
+<p>Cosmic is a content-fork of the Rocket theme. It was developed by Lafayette College ITS.</p>
 <p>Rocket is a three column fixed-width theme for Moodle 2.1+ originally designed by Julian Ridden to take Moodle themes to a more website focused look and feel. While the design is original, much of the CSS and the icons have come from <a href="http://moodle.org/user/profile.php?id=299683"><strong>Saun Daubney\'s</strong></a> fantastic Aardvark theme and also with support in the forums from <a href="http://moodle.org/user/profile.php?id=713800"><strong>Mary Evans</strong></a>.</p>
 
-<p>The theme is highly customisable through Moodle\'s theme settings. You can adjust images, text and colurs all without changing code. The theme also has a function that means that when users log in, courses they are enrolled in will show up in the dropdown \'custom menu\' at the top of the screen.</p>
+<p>The theme is highly customisable through Moodle\'s theme settings. You can adjust images, text and colurs all without changing code. The theme also has a function that means that when users log in, courses they are enrolled in will show up in the dropdown \'custom menu\' at the top of the screen.</p>';
 
-<p>Please note that this is listed as a Beta version. There will probably be some bugs here and there. It has been proudly built on a Mac and as such is untested in IE.</p>
-
-<h1>Instructions</h1>
-
-<h2>Block Regions</h2>
-<p>This theme is the first, as far as I am aware, to use blocks outside of the standard left and right column methodology. There are two addional locations called \'Search/profile\' and \'Top Link\'s.</p>
-<p>The Top Links region is used on the top right of the homepage and can be used for whatever you design. I find HTML blocks with links or spotlighted info works well.</p>
-<p>The Search/Profile region is specifically designed to have either the \'Global Search\' or the "Logged in user" block stored in it. This region is available on all pages
-
-<h2>Logo and Homepage Banner Images</b>
-
-<h2>Color Schemes</h2>
-<p>In the theme settings screen for Rocket you will find you are able to adjust the color of this theme to suit your branding. Both background colors and menu colors can be adjusted as well as the border colors.</p>
-
-<h2 Additional Footer Text</h2>
-<p>In the theme settings you can also adjust three additonal text fields. The \'Institution Name\' is hsown only on the homepage. This was added as often the name of thei organisation is different to the name of the Moodle site itself.</p>
-<p>';
-
-$string['configtitle'] = 'rocket theme';
+$string['configtitle'] = 'cosmic theme';
 
 $string['homeblock'] = 'banner';
 

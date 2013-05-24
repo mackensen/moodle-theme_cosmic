@@ -1,19 +1,20 @@
 <?php
 
-$THEME->name = 'rocket';
+$THEME->name = 'cosmic';
 
 $THEME->parents = array('base');
 
 $THEME->sheets = array(
-    'rocket_layout',   /** Must come first: Page layout **/
-    'rocket_styles',   /** Must come second: default styles **/
-    'rocket_menu',
-    'rocket_blocks',
-    'rocket_mod',
-    'rocket_calendar',
-    'rocket_dock',
-    'rocket_settings',
-    'rtl'
+    'layout',   /** Must come first: Page layout **/
+    'cosmic',   /** Must come second: default styles **/
+    '_menu',
+    'blocks',
+    'mod',
+    'calendar',
+    'dock',
+    'settings',
+    'rtl',
+    'tablet'
 );
 
 $THEME->parents_exclude_sheets = array(
@@ -28,7 +29,7 @@ $THEME->layouts = array(
     // Most backwards compatible layout without the blocks - this is the layout used by default
     'base' => array(
         'file' => 'general.php',
-        'regions' => array('search'),
+        'regions' => array(),
     ),
     // Standard layout with blocks, this is recommended for most pages with default information
     'standard' => array(
@@ -139,7 +140,7 @@ $THEME->layouts = array(
 // specific page.
 ///////////////////////////////////////////////////////////////
 
-$THEME->csspostprocess = 'rocket_process_css';
+$THEME->csspostprocess = 'cosmic_process_css';
         
 ////////////////////////////////////////////////////
 // An array of stylesheets not to inherit from the

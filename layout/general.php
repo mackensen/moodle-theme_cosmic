@@ -18,13 +18,13 @@
  * General layout for the mymobile theme
  *
  * @package    theme
- * @subpackage rocket
+ * @subpackage cosmic
  * @copyright  Julian Ridden
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // get settings
-$toset = optional_param('rocket_settings', false, PARAM_BOOL);
+$toset = optional_param('cosmic_settings', false, PARAM_BOOL);
 
 $hasheading = ($PAGE->heading);
 $hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
@@ -44,8 +44,8 @@ $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custom
 $hasfootnote = (!empty($PAGE->theme->settings->footnote));
 
 // load lang strings
-$editingmode = get_string('editingmode', 'theme_rocket');
-$navigation = get_string('navigation', 'theme_rocket');
+$editingmode = get_string('editingmode', 'theme_cosmic');
+$navigation = get_string('navigation', 'theme_cosmic');
 
 
 $bodyclasses = array();
@@ -74,7 +74,7 @@ echo $OUTPUT->doctype() ?>
 }
 
 if ($autohide == 'enable') {
-    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/rocket/style/rocket_autohide.css" />
+    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/cosmic_autohide.css" />
 <?php } ?>
 <!-- END AUTOHIDE STATUS CHECK -->
 
@@ -86,7 +86,7 @@ if ($autohide == 'enable') {
 }
 
 if ($bootstrap == 'enable') {
-    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/rocket/style/rocket_bootstrap.css" />
+    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/bootstrap.css" />
 <?php } ?>
 <!-- END BOOTSTRAP STATUS CHECK -->
 

@@ -41,7 +41,7 @@ echo $OUTPUT->doctype() ?>
     }
     
     if ($bootstrap == 'enable') {
-        ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/rocket/style/rocket_bootstrap.css" />
+        ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/bootstrap.css" />
     <?php } ?>
     <!-- END BOOTSTRAP STATUS CHECK -->
     

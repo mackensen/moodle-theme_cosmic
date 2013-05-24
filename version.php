@@ -18,8 +18,9 @@
  * Theme version info
  *
  * @package    theme
- * @subpackage rocket
- * @copyright  2012 Julian Ridden
+ * @subpackage cosmic
+ * @copyright  2013 Lafayette College ITS
+ * @copyright  2012 Julian Ridden (original Rocket theme)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -27,6 +28,6 @@ defined('MOODLE_INTERNAL') || die;
 
 $plugin->version   = 2012080300; // The current module version (Date: YYYYMMDDXX)
 $plugin->requires  = 2012062500; // Requires this Moodle version
-$plugin->component = 'theme_rocket'; // Full name of the plugin (used for diagnostics)
+$plugin->component = 'theme_cosmic'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity = 'stable'; // The current stability of this version (used for diagnostics)
 $plugin->release = '2.2'; // The release name of this version (used for diagnostics)

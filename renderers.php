@@ -1,6 +1,6 @@
 <?php
 
-class theme_rocket_core_renderer extends core_renderer {
+class theme_cosmic_core_renderer extends core_renderer {
 
     /**
      * Renders a custom menu object (located in outputcomponents.php)
@@ -22,13 +22,13 @@ class theme_rocket_core_renderer extends core_renderer {
             $branchsort  = 10000;
 
                         if ($mycoursetitle == 'module') {
-                                $branchlabel = get_string('mymodules', 'theme_rocket');
+                                $branchlabel = get_string('mymodules', 'theme_cosmic');
                         } else if ($mycoursetitle == 'unit') {
-                                $branchlabel = get_string('myunits', 'theme_rocket');
+                                $branchlabel = get_string('myunits', 'theme_cosmic');
                         } else if ($mycoursetitle == 'class') {
-                                $branchlabel = get_string('myclasses', 'theme_rocket');
+                                $branchlabel = get_string('myclasses', 'theme_cosmic');
                         } else {
-                                $branchlabel = get_string('mycourses', 'theme_rocket');
+                                $branchlabel = get_string('mycourses', 'theme_cosmic');
                         }
 
                         $branchtitle = $branchlabel;
@@ -41,13 +41,13 @@ class theme_rocket_core_renderer extends core_renderer {
 
         } else {
                 if ($mycoursetitle == 'module') {
-                                $branchlabel = get_string('allmodules', 'theme_rocket');
+                                $branchlabel = get_string('allmodules', 'theme_cosmic');
                         } else if ($mycoursetitle == 'unit') {
-                                $branchlabel = get_string('allunits', 'theme_rocket');
+                                $branchlabel = get_string('allunits', 'theme_cosmic');
                         } else if ($mycoursetitle == 'class') {
-                                $branchlabel = get_string('allclasses', 'theme_rocket');
+                                $branchlabel = get_string('allclasses', 'theme_cosmic');
                         } else {
-                                $branchlabel = get_string('allcourses', 'theme_rocket');
+                                $branchlabel = get_string('allcourses', 'theme_cosmic');
                         }
 
                         $branchtitle = $branchlabel;
@@ -183,15 +183,15 @@ class theme_rocket_core_renderer extends core_renderer {
         }
         if ($edittoggle == 'enable') {
                         $url->param('sesskey', sesskey());
-                        $formclose ='</span><div id="editmode">'.get_string('editmode', 'theme_rocket').'<div id="edittoggle">'.get_string('edittoggle', 'theme_rocket').'&nbsp;</div></div>';
+                        $formclose ='</span><div id="editmode">'.get_string('editmode', 'theme_cosmic').'<div id="edittoggle">'.get_string('edittoggle', 'theme_cosmic').'&nbsp;</div></div>';
                 if ($this->page->user_is_editing()) {
                                 $formopen = '<span id="editbuttonon">';
                                 $url->param('edit', 'off');
-                                $editstring = get_string('turneditingoff','theme_rocket');
+                                $editstring = get_string('turneditingoff','theme_cosmic');
                 } else {
                 $formopen ='<span id="editbuttonoff">';
                                 $url->param('edit', 'on');
-                $editstring = get_string('turneditingon','theme_rocket');
+                $editstring = get_string('turneditingon','theme_cosmic');
                 }
                 return $formopen . $this->single_button($url, $editstring) . $formclose;
 
@@ -232,7 +232,7 @@ class theme_rocket_core_renderer extends core_renderer {
                 error_log("PERF: " . $perf['txt']);
             }
             if (defined('MDL_PERFTOFOOT') || debugging() || $CFG->perfdebug > 7) {
-                $performanceinfo = rocket_performance_output($perf);
+                $performanceinfo = cosmic_performance_output($perf);
             }
         }
 

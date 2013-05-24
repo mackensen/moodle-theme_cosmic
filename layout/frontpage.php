@@ -18,7 +18,7 @@
  * General layout for the mymobile theme
  *
  * @package    theme
- * @subpackage rocket
+ * @subpackage cosmic
  * @copyright  Julian Ridden
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -47,7 +47,7 @@ $hasfootnote = (!empty($PAGE->theme->settings->footnote));
 
 
 // load lang strings
-$editingmode = get_string('editingmode', 'theme_rocket');
+$editingmode = get_string('editingmode', 'theme_cosmic');
 
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
@@ -75,7 +75,7 @@ echo $OUTPUT->doctype() ?>
 }
 
 if ($autohide == 'enable') {
-    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/rocket/style/rocket_autohide.css" />
+    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/cosmic_autohide.css" />
 <?php } ?>
 <!-- END AUTOHIDE STATUS CHECK -->
 
@@ -87,7 +87,7 @@ if ($autohide == 'enable') {
 }
 
 if ($bootstrap == 'enable') {
-    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/rocket/style/rocket_bootstrap.css" />
+    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/bootstrap.css" />
 <?php } ?>
 <!-- END BOOTSTRAP STATUS CHECK -->
 
