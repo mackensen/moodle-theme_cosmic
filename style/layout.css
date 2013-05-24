@@ -62,38 +62,38 @@ body {
     background: #fff;        /* Right column background colour */
 }
 #region-main-wrap {
-    float:right;
-    width:50%;
-    position:relative;
-    right:100%;
+    float: right;
+    width: 50%;
+    position: relative;
+    right: 100%;
 }
 #region-main-pad {
-    margin:15px 0px 0 520px;
-    overflow:hidden;
+    margin: 15px 0 0 520px;
+    overflow: hidden;
 }
 #region-main {
-    width:100%;
-    overflow:hidden;
+    width: 100%;
+    overflow: hidden;
 }
 #region-pre {
-    float:left;
-    width:250px;
-    position:relative;
-    margin-left:-50%;
-    left:250px;
-    overflow:hidden;
+    float: left;
+    width: 250px;
+    position: relative;
+    margin-left: -50%;
+    left: 250px;
+    overflow: hidden;
     background: transparent;
 }
 #region-post {
-    float:left;
-    width:250px;
-    position:relative;
-    left:0px;
-    overflow:hidden;
+    float: left;
+    width: 250px;
+    position: relative;
+    left: 0px;
+    overflow: hidden;
 }
 #page-content #region-main-box .region-content {
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 #page-site-index .headingblock {
     margin-bottom:9px;

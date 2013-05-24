@@ -1,19 +1,24 @@
 /* @group Generic Blocks */
 
-#region-pre .block, #region-post .block {
-        margin : 20px;
-        margin-top: 15px;
-        margin-bottom: 0px;
-        padding : 0px;
-        border: 0px none;
-        background : #fff;
+.block {
+    margin: 0;
+}
+
+#region-pre .block, 
+#region-post .block {
+    margin: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border: 0px none;
+    background: #fff;
 }
 
 .block .header {
-        margin : 0 0 0 !important ;
-        padding-top : 0 !important ;
-        border-bottom : 0px none;
-        background: [[setting:themecolor]];
+    margin : 0 0 0 !important ;
+    padding-top : 0 !important ;
+    border-bottom : 0px none;
+    background: [[setting:themecolor]];
 }
 
 .block .header .block_action {
@@ -346,7 +351,6 @@
 #search .block_myprofile .title h2,
 #search .block_myprofile label,
 #search .block_myprofile .block_action {
-
         display: none;
 }
 
@@ -417,7 +421,7 @@
 
 /* @end */
 
-/* #group RSS block */
+/* @group RSS block */
 .block_rss_client .list li:first-child {
         border-top-width: 0;
 }

@@ -1,10 +1,10 @@
 /* Custom Menu
 -------------------------- */
 #menuwrap {
-        height: 36px;
-        background: [[setting:menucolor]];
-        width: 100%;
-        padding: 0px;
+    height: 36px;
+    background: [[setting:menucolor]];
+    width: 100%;
+    padding: 0px;
 }
 
 #custommenu {
@@ -18,8 +18,7 @@
 }
 
 #custommenu ul li {
-    border-right: 1px solid #777;
-    border-left: 1px solid #999;
+    border: none;
 }
 /*
 Dropdown Menu - CSS from DeCaf Theme by Lei Zhang
@@ -29,27 +28,42 @@ ul.dropdown span.customitem {
     border:0;
     width: 100%;
 }
+
 ul.dropdown span.customitem {
     padding:0;
     width: 100%;
 }
+
 ul.dropdown li a,
 ul.dropdown span.customitem a {
-    padding:10px 20px;
+    padding: 5px 20px;
 }
+
 ul.dropdown span.customitem a:hover {
     border: 0;
+    cursor: default;
+    position: relative;
+    text-decoration: underline;
+    z-index: 599;
 }
+
 #custommenu ul.dropdown ul {
-    padding:0;
-    width:auto;
+    padding: 0;
+    width: auto;
 }
+
 #custommenu ul.dropdown ul a {
-    padding:8px 18px;
+    padding: 8px 18px;
 }
+
+#custommenu ul.dropdown ul li {
+    margin-left: -400px;
+}
+
 #custommenu ul.dropdown > li span a {
     height:16px;
 }
+
 ul.dropdown,
 ul.dropdown li,
 ul.dropdown ul {
