@@ -1,12 +1,18 @@
 /* @group Generic Blocks */
 
-#region-pre .block, #region-post .block {	margin : 20px;
+#region-pre .block, #region-post .block {
+	margin : 20px;
 	margin-top: 15px;
-	margin-bottom: 0px;	padding : 0px;	border: 0px none;
-	background : #fff;}
+	margin-bottom: 0px;
+	padding : 0px;
+	border: 0px none;
+	background : #fff;
+}
 
 .block .header {
-	margin : 0 0 0 !important ;	padding-top : 0 !important ;	border-bottom : 0px none;
+	margin : 0 0 0 !important ;
+	padding-top : 0 !important ;
+	border-bottom : 0px none;
 	background: [[setting:themecolor]];
 }
 
@@ -121,7 +127,13 @@
     color:#777;
 }
 .block .header .title h2 {
-    padding : 0px 0px 5px 10px;	font-size : 1.2em;	text-transform : uppercase;	margin : 0 !important ;	font-weight : 300;	color : #fff;	padding-top : 8px;
+    padding : 0px 0px 5px 10px;
+	font-size : 1.2em;
+	text-transform : uppercase;
+	margin : 0 !important ;
+	font-weight : 300;
+	color : #fff;
+	padding-top : 8px;
 }
 .block .header .block_action {
     float:right;
@@ -166,10 +178,16 @@
 	margin: 0px !important;
 	background: [[setting:themecolor]] !important;
 }
-.block_login div.content label {	color: #fff;
+
+.block_login div.content label {
+	color: #fff;
 	text-transform: uppercase;
-	font-size : 1em;	display : inline-block;	min-width : 50px;	margin-right : 3px;
-	padding-bottom: 10px;}
+	font-size : 1em;
+	display : inline-block;
+	min-width : 50px;
+	margin-right : 3px;
+	padding-bottom: 10px;
+}
 
 .block_login div.content a {
 	color: #fff;
@@ -222,6 +240,7 @@
 
 #toplinks .block label,
 #toplinks .block .block_action {
+
 	display: none;
 }
 
@@ -327,6 +346,7 @@
 #search .block_myprofile .title h2,
 #search .block_myprofile label,
 #search .block_myprofile .block_action {
+
 	display: none;
 }
 

@@ -135,11 +135,20 @@ if ($bootstrap == 'enable') {
 				</div>
 			</div>
 		<?php } ?>
-		<div class="jcontrolsleft">					<?php if ($hasnavbar) { ?>			<div class="nav_title"><?php echo $navigation ?></div>
+		<div class="jcontrolsleft">		
+			<?php if ($hasnavbar) { ?>
+			<div class="nav_title"><?php echo $navigation ?></div>
 			<div class="navbar clearfix">
-				<div class="breadcrumb"> <?php echo $OUTPUT->navbar();  ?></div>			</div>			<?php } ?>		</div>		<div id="ebutton">			<?php if ($hasnavbar) { 
+
+				<div class="breadcrumb"> <?php echo $OUTPUT->navbar();  ?></div>
+			</div>
+			<?php } ?>
+		</div>
+		<div id="ebutton">
+			<?php if ($hasnavbar) { 
 				echo $PAGE->button; 
-			} ?>		</div>
+			} ?>
+		</div>
 	</div>
 <!-- END NAVBAR -->
 	
