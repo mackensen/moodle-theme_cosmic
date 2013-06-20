@@ -99,14 +99,6 @@ function cosmic_process_css($css, $theme) {
     }
     //$css = cosmic_set_autohide($css,$autohide);
 
-    // Toggle Bootstrap functionality
-    if (!empty($theme->settings->bootstrap)) {
-       $bootstrap = $theme->settings->bootstrap;
-    } else {
-       $bootstrap = null;
-    }
-    //$css = cosmic_set_bootstrap($css,$bootstrap);
-
     // Set the background image for the Banner
     if (!empty($theme->settings->banner)) {
         $banner = $theme->settings->banner;
@@ -271,16 +263,6 @@ function cosmic_set_autohide($css, $autohide) {
     $replacement = $autohide;
     if (is_null($replacement)) {
         $replacement = 'enable';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function cosmic_set_bootstrap($css, $bootstrap) {
-    $tag = '[[setting:bootstrap]]';
-    $replacement = $bootstrap;
-    if (is_null($replacement)) {
-        $replacement = 'disable';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;

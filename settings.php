@@ -36,18 +36,6 @@ $choices = array(
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
 
-// Set status of Bootstrap functionality
-$name = 'theme_cosmic/bootstrap';
-$title = get_string('bootstrap','theme_cosmic');
-$description = get_string('bootstrapdesc', 'theme_cosmic');
-$default = 'disable';
-$choices = array(
-        'enable' => get_string('enable', 'theme_cosmic'),
-        'disable' => get_string('disable', 'theme_cosmic')
-);
-$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
-$settings->add($setting);
-
 // Set terminology for dropdown couse list
 $name = 'theme_cosmic/mycoursetitle';
 $title = get_string('mycoursetitle','theme_cosmic');

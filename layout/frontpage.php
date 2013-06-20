@@ -79,18 +79,6 @@ if ($autohide == 'enable') {
 <?php } ?>
 <!-- END AUTOHIDE STATUS CHECK -->
 
-<!-- START BOOTSRTAP STATUS CHECK -->
-<?php if (!empty($PAGE->theme->settings->bootstrap)) {
-    $bootstrap = $PAGE->theme->settings->bootstrap;
-} else {
-    $bootstrap = 'disable';
-}
-
-if ($bootstrap == 'enable') {
-    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/bootstrap.css" />
-<?php } ?>
-<!-- END BOOTSTRAP STATUS CHECK -->
-
         <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 
