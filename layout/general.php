@@ -74,7 +74,7 @@ echo $OUTPUT->doctype() ?>
 }
 
 if ($autohide == 'enable') {
-    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/cosmic_autohide.css" />
+    ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/autohide.css" />
 <?php } ?>
 <!-- END AUTOHIDE STATUS CHECK -->
 

@@ -7,7 +7,7 @@ $THEME->parents = array('base');
 $THEME->sheets = array(
     'layout',   /** Must come first: Page layout **/
     'cosmic',   /** Must come second: default styles **/
-    '_menu',
+    'menu',
     'blocks',
     'mod',
     'calendar',
@@ -90,32 +90,32 @@ $THEME->layouts = array(
     // Pages that appear in pop-up windows - no navigation, no blocks, no header.
     'popup' => array(
         'file' => 'general.php',
-        'regions' => array('search'),
+        'regions' => array(),
         'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true),
     ),
     // No blocks and minimal footer - used for legacy frame layouts only!
     'frametop' => array(
         'file' => 'general.php',
-        'regions' => array('search'),
+        'regions' => array(),
         'options' => array('nofooter'=>true),
     ),
     // Embedded pages, like iframe/object embeded in moodleform - it needs as much space as possible
     'embedded' => array(
         'file' => 'embedded.php',
-        'regions' => array('search')
+        'regions' => array()
     ),
     // Used during upgrade and install, and for the 'This site is undergoing maintenance' message.
     // This must not have any blocks, and it is good idea if it does not have links to
     // other places - for example there should not be a home link in the footer...
     'maintenance' => array(
         'file' => 'general.php',
-        'regions' => array('search'),
+        'regions' => array(),
         'options' => array('noblocks'=>true, 'nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true),
     ),
     // Should display the content and basic headers only.
     'print' => array(
         'file' => 'general.php',
-        'regions' => array('search'),
+        'regions' => array(),
         'options' => array('noblocks'=>true, 'nofooter'=>true, 'nonavbar'=>false, 'nocustommenu'=>true),
     ),
     // The pagelayout used when a redirection is occuring.
