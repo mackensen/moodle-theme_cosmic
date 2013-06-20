@@ -128,3 +128,5 @@ $string['turneditingoff'] = 'On';
 $string['turneditingon'] = 'Off';
 $string['editmode'] = 'Edit mode is:';
 $string['edittoggle'] = 'click to toggle';
+$string['breadcrumbwidth'] = 'Maximum breadcrumb width';
+$string['breadcrumbwidthdesc'] = 'The maximum permitted width for breadcrumbs in the navigation bar.';

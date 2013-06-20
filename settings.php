@@ -176,6 +176,13 @@ $default = '';
 $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
 $settings->add($setting);
 
+// Breadcrumb width.
+$name = 'theme_cosmic/breadcrumbwidth';
+$title = get_string('breadcrumbwidth', 'theme_cosmic');
+$description = get_string('breadcrumbwidthdesc','theme_cosmic');
+$default = '75%';
+$setting = new admin_setting_configtext($name, $title, $description, $default);
+$settings->add($setting);
 
 // Copyright Notice
 $name = 'theme_cosmic/copyright';
