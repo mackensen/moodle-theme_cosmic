@@ -12,53 +12,56 @@ class theme_cosmic_core_renderer extends core_renderer {
      * @return string
      */
     protected function render_custom_menu(custom_menu $menu) {
+        global $CFG;
+        require_once($CFG->dirroot.'/course/lib.php');
 
-                // Generate custom My Courses dropdown
-        $mycourses = $this->page->navigation->get('mycourses');
-                $mycoursetitle = $this->page->theme->settings-> mycoursetitle;
-
-                if (isloggedin() && $mycourses && $mycourses->has_children()) {
+        $mycoursetitle = $this->page->theme->settings->mycoursetitle;
+        if (isloggedin() && !isguestuser() && $mycourses = enrol_get_my_courses(null, 'visible DESC, fullname ASC')) {
             $branchurl   = new moodle_url('/my/index.php');
             $branchsort  = 10000;
-
-                        if ($mycoursetitle == 'module') {
-                                $branchlabel = get_string('mymodules', 'theme_cosmic');
-                        } else if ($mycoursetitle == 'unit') {
-                                $branchlabel = get_string('myunits', 'theme_cosmic');
-                        } else if ($mycoursetitle == 'class') {
-                                $branchlabel = get_string('myclasses', 'theme_cosmic');
-                        } else {
-                                $branchlabel = get_string('mycourses', 'theme_cosmic');
-                        }
-
-                        $branchtitle = $branchlabel;
-
+            switch ($mycoursetitle) {
+                case 'module':
+                    $branchlabel = get_string('mymodules', 'theme_cosmic');
+                    break;
+                case 'unit':
+                    $branchlabel = get_string('myunits', 'theme_cosmic');
+                    break;
+                case 'class':
+                    $branchlabel = get_string('myclasses', 'theme_cosmic');
+                    break;
+                default:
+                    $branchlabel = get_string('mycourses', 'theme_cosmic');
+                    break;
+            }
+            $branchtitle = $branchlabel;
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
 
-            foreach ($mycourses->children as $coursenode) {
-                $branch->add($coursenode->get_content(), $coursenode->action, $coursenode->get_title());
+            foreach ($mycourses as $mycourse) {
+                $branch->add($mycourse->shortname, new moodle_url('/course/view.php', array('id' => $mycourse->id)), $mycourse->fullname);
+            }
+        } else {
+            switch ($mycoursetitle) {
+                case 'module':
+                    $branchlabel = get_string('allmodules', 'theme_cosmic');
+                    break;
+                case 'unit':
+                    $branchlabel = get_string('allunits', 'theme_cosmic');
+                    break;
+                case 'class':
+                    $branchlabel = get_string('allclasses', 'theme_cosmic');
+                    break;
+                default:
+                    $branchlabel = get_string('allcourses', 'theme_cosmic');
+                    break;
             }
 
-        } else {
-                if ($mycoursetitle == 'module') {
-                                $branchlabel = get_string('allmodules', 'theme_cosmic');
-                        } else if ($mycoursetitle == 'unit') {
-                                $branchlabel = get_string('allunits', 'theme_cosmic');
-                        } else if ($mycoursetitle == 'class') {
-                                $branchlabel = get_string('allclasses', 'theme_cosmic');
-                        } else {
-                                $branchlabel = get_string('allcourses', 'theme_cosmic');
-                        }
-
-                        $branchtitle = $branchlabel;
+            $branchtitle = $branchlabel;
             $branchurl   = new moodle_url('/course/index.php');
             $branchsort  = 10000;
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
         }
 
-
-
-                // If the menu has no children return an empty string
+        // If the menu has no children return an empty string
         if (!$menu->has_children()) {
             return '';
         }
