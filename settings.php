@@ -76,7 +76,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_cosmic/logo';
     $title = get_string('logo', 'theme_cosmic');
     $description = get_string('logodesc', 'theme_cosmic');
-    $default = 'cosmic/pix/logo/cosmic.png';
+    $default = 'cosmic/pix/logo/logo.png';
     $setting = new admin_setting_configfile($name, $title, $description, $default);
     $settings->add($setting);
 
