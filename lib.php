@@ -304,27 +304,6 @@ function cosmic_set_customcss($css, $customcss) {
 }
 
 /**
- * get_performance_output() override get_peformance_info()
- *  in moodlelib.php. Returns a string
- * values ready for use.
- *
- * This function was created by Lei Zhang and was originally used in the decaf theme
- * @return string
- */
-function cosmic_performance_output($param) {
-
-    $html = '<div class="performanceinfo"><ul>';
-        if (isset($param['realtime'])) $html .= '<li><a class="red" href="#"><var>'.$param['realtime'].' secs</var><span>Load Time</span></a></li>';
-        if (isset($param['memory_total'])) $html .= '<li><a class="orange" href="#"><var>'.display_size($param['memory_total']).'</var><span>Memory Used</span></a></li>';
-    if (isset($param['includecount'])) $html .= '<li><a class="blue" href="#"><var>'.$param['includecount'].' Files </var><span>Included</span></a></li>';
-    if (isset($param['dbqueries'])) $html .= '<li><a class="purple" href="#"><var>'.$param['dbqueries'].' </var><span>DB Read/Write</span></a></li>';
-    $html .= '</ul></div>';
-
-    return $html;
-}
-
-
-/**
  * Generate updated custommenu with enroled courses listed
  */
 class transmuted_custom_menu_item extends custom_menu_item {
