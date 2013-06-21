@@ -77,7 +77,7 @@ if (!empty($PAGE->theme->settings->autohide)) {
 
 if ($autohide == 'enable') {
     ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/autohide.css" />
-<?php 
+<?php
 }
 ?>
 <!-- END AUTOHIDE STATUS CHECK -->
@@ -124,7 +124,7 @@ if ($hasheading || $hasnavbar) {
                             <div id="menuwrap">
                                 <div id="custommenu" class="javascript-disabled"><?php echo $custommenu; ?></div>
                             </div>
-<?php 
+<?php
     }
 ?>
 <!-- END OF CUSTOMMENU -->
@@ -155,7 +155,7 @@ if ($hastoplinks) {
 ?>
             </div>
             <div id="homeblock">
-<?php 
+<?php
 if ($hashomeblock) {
 ?>
                 <div class="region-content">
