@@ -17,9 +17,9 @@
 /**
  * Front page layout for the cosmic theme.
  *
- * @package    theme
- * @subpackage cosmic
- * @copyright  Julian Ridden
+ * @package    theme_cosmic
+ * @copyright  2013 Lafayette College ITS
+ * @copyright  2012 Julian Ridden (original Rocket theme)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

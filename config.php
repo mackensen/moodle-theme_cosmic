@@ -15,10 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme version info
+ * Theme configuration
  *
- * @package    theme
- * @subpackage cosmic
+ * @package    theme_cosmic
  * @copyright  2013 Lafayette College ITS
  * @copyright  2012 Julian Ridden (original Rocket theme)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
