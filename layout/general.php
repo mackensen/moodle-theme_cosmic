@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * General layout for the mymobile theme
+ * General layout for the cosmic theme
  *
  * @package    theme
  * @subpackage cosmic
@@ -23,7 +23,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// get settings
+// Get settings.
 $toset = optional_param('cosmic_settings', false, PARAM_BOOL);
 
 $hasheading = ($PAGE->heading);
@@ -32,7 +32,8 @@ $hasfooter = (empty($PAGE->layout_options['nofooter']));
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
-// get custom region settings
+
+// Get custom region settings.
 $hassearch = ($PAGE->blocks->region_has_content('search', $OUTPUT));
 
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
@@ -43,7 +44,7 @@ $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custom
 
 $hasfootnote = (!empty($PAGE->theme->settings->footnote));
 
-// load lang strings
+// Load lang strings.
 $editingmode = get_string('editingmode', 'theme_cosmic');
 $navigation = get_string('navigation', 'theme_cosmic');
 
@@ -75,7 +76,9 @@ echo $OUTPUT->doctype() ?>
 
 if ($autohide == 'enable') {
     ?><link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot; ?>/theme/cosmic/style/autohide.css" />
-<?php } ?>
+<?php
+}
+?>
 <!-- END AUTOHIDE STATUS CHECK -->
 
     <?php echo $OUTPUT->standard_head_html() ?>
@@ -84,118 +87,152 @@ if ($autohide == 'enable') {
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="page-wrapper">
-  <div id="page">
-   <?php if ($hasheading || $hasnavbar) { ?>
-    <div id="page-header">
-        <?php if ($hasheading) { ?>
-         <table style="width:100%; height:133px; margin: 0px;"><tr><td width="250px" style="margin:0px; padding:0px;">
-                 <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-                 </td><td valign="bottom" style="margin:0px; padding:0px;">
-         <div class="headermenu"><?php
-            if ($haslogininfo) {
-                echo $OUTPUT->login_info();
-            }
-            if (!empty($PAGE->layout_options['langmenu'])) {
-                echo $OUTPUT->lang_menu();
-            }
-            echo $PAGE->headingmenu
-            ?></div>
-        <?php } ?>
+    <div id="page">
+<?php
+if ($hasheading || $hasnavbar) {
+?>
+        <div id="page-header">
+<?php
+    if ($hasheading) {
+?>
+            <table style="width:100%; height:133px; margin: 0px;">
+                <tr>
+                    <td width="250px" style="margin:0px; padding:0px;">
+                        <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
+                    </td>
+                    <td valign="bottom" style="margin:0px; padding:0px;">
+                        <div class="headermenu">
+<?php
+        if ($haslogininfo) {
+            echo $OUTPUT->login_info();
+        }
+        if (!empty($PAGE->layout_options['langmenu'])) {
+            echo $OUTPUT->lang_menu();
+        }
+        echo $PAGE->headingmenu
+?>
+                        </div>
+<?php
+    }
+?>
 <!-- START CUSTOMMENU -->
-         <div id="navcontainer">
-        <?php if ($hascustommenu) { ?>
-                <div id="menuwrap"><div id="custommenu" class="javascript-disabled"><?php echo $custommenu; ?></div></div>
-        <?php } ?>
+                        <div id="navcontainer">
+<?php
+    if ($hascustommenu) {
+?>
+                            <div id="menuwrap">
+                                <div id="custommenu" class="javascript-disabled"><?php echo $custommenu; ?></div>
+                            </div>
+<?php
+    }
+?>
 <!-- END OF CUSTOMMENU -->
-    </td></tr></table>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-<?php } ?>
+<?php
+}
+?>
 <!-- END OF HEADER -->
-   <div id="editingmode"><?php echo $editingmode ?></div>
-<div id="page-content">
+    <div id="editingmode"><?php echo $editingmode ?></div>
+    <div id="page-content">
 <!-- START NAVBAR -->
         <div id="headerstrip">
-                <?php if($hassearch) { ?>
-                        <div id="search">
-                                <div class="region-content">
-                                        <?php echo $OUTPUT->blocks_for_region('search') ?>
-                                </div>
-                        </div>
-                <?php } ?>
-                <div class="jcontrolsleft">
-                        <?php if ($hasnavbar) { ?>
-                        <div class="nav_title"><?php echo $navigation ?></div>
-                        <div class="navbar clearfix">
-
-                                <div class="breadcrumb"> <?php echo $OUTPUT->navbar();  ?></div>
-                        </div>
-                        <?php } ?>
+<?php
+if ($hassearch) {
+?>
+            <div id="search">
+                <div class="region-content">
+                    <?php echo $OUTPUT->blocks_for_region('search') ?>
                 </div>
-                <div id="ebutton">
-                        <?php if ($hasnavbar) {
-                                echo $PAGE->button;
-                        } ?>
+            </div>
+<?php
+}
+?>
+            <div class="jcontrolsleft">
+<?php
+if ($hasnavbar) {
+?>
+                <div class="nav_title"><?php echo $navigation ?></div>
+                <div class="navbar clearfix">
+                    <div class="breadcrumb"> <?php echo $OUTPUT->navbar();  ?></div>
                 </div>
+<?php
+}
+?>
+            </div>
+            <div id="ebutton">
+<?php
+if ($hasnavbar) {
+    echo $PAGE->button;
+}
+?>
+            </div>
         </div>
 <!-- END NAVBAR -->
-
-       <div id="region-main-box">
-           <div id="region-post-box">
-              <div id="region-main-wrap">
-                 <div id="region-main-pad">
-                   <div id="region-main">
-                     <div class="region-content">
-                            <?php echo $OUTPUT->main_content() ?>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-
-                <?php if ($hassidepre) { ?>
+        <div id="region-main-box">
+            <div id="region-post-box">
+                <div id="region-main-wrap">
+                    <div id="region-main-pad">
+                        <div id="region-main">
+                            <div class="region-content">
+                                <?php echo $OUTPUT->main_content() ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<?php
+if ($hassidepre) {
+?>
                 <div id="region-pre" class="block-region">
-                   <div class="region-content">
+                    <div class="region-content">
                         <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-                   </div>
+                    </div>
                 </div>
-                <?php } ?>
-
-                <?php if ($hassidepost) { ?>
+<?php
+}
+if ($hassidepost) {
+?>
                 <div id="region-post" class="block-region">
-                   <div class="region-content">
+                    <div class="region-content">
                         <?php echo $OUTPUT->blocks_for_region('side-post') ?>
-                   </div>
+                    </div>
                 </div>
-                <?php } ?>
+<?php
+}
+?>
             </div>
         </div>
     </div>
-
     <!-- START OF FOOTER -->
-    <?php if ($hasfooter) { ?>
+<?php
+if ($hasfooter) {
+?>
     <div id="page-footer" class="clearfix">
-
         <div class="footer-left">
-
-            <?php if ($hasfootnote) { ?>
-                    <div id="footnote"><?php echo $PAGE->theme->settings->footnote;?></div>
-            <?php } ?>
-
+<?php
+    if ($hasfootnote) {
+?>
+            <div id="footnote"><?php echo $PAGE->theme->settings->footnote;?></div>
+<?php
+    }
+?>
             <a href="http://moodle.org" title="Moodle">
                 <div id="logo"></div>
             </a>
         </div>
-
         <div class="footer-right">
             <div class="copyright"><?php echo $PAGE->theme->settings->copyright; ?></div>
-                        <?php echo $OUTPUT->login_info();?>
+            <?php echo $OUTPUT->login_info();?>
         </div>
-
         <?php echo $OUTPUT->standard_footer_html(); ?>
     </div>
-    <?php } ?>
+<?php
+}
+?>
     <div class="clearfix"></div>
-</div>
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>

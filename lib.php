@@ -1,7 +1,31 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Theme version info
+ *
+ * @package    theme
+ * @subpackage cosmic
+ * @copyright  2013 Lafayette College ITS
+ * @copyright  2012 Julian Ridden (original Rocket theme)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 function cosmic_process_css($css, $theme) {
-    // Set the theme background and highlites
+    // Set the theme background and highlights.
     if (!empty($theme->settings->themecolor)) {
         $themecolor = $theme->settings->themecolor;
     } else {
@@ -9,7 +33,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_themecolor($css, $themecolor);
 
-    // Set the theme trim color
+    // Set the theme trim color.
     if (!empty($theme->settings->themetrimcolor)) {
         $themetrimcolor = $theme->settings->themetrimcolor;
     } else {
@@ -17,7 +41,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_themetrimcolor($css, $themetrimcolor);
 
-    // Set the custommenu color
+    // Set the custommenu color.
     if (!empty($theme->settings->menucolor)) {
         $menucolor = $theme->settings->menucolor;
     } else {
@@ -25,7 +49,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_menucolor($css, $menucolor);
 
-    // Set the custommenu hover color
+    // Set the custommenu hover color.
     if (!empty($theme->settings->menuhovercolor)) {
         $menuhovercolor = $theme->settings->menuhovercolor;
     } else {
@@ -33,7 +57,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_menuhovercolor($css, $menuhovercolor);
 
-    // Set the custommenu trim color
+    // Set the custommenu trim color.
     if (!empty($theme->settings->menutrimcolor)) {
         $menutrimcolor = $theme->settings->menutrimcolor;
     } else {
@@ -41,7 +65,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_menutrimcolor($css, $menutrimcolor);
 
-    // Set the custommenu link color
+    // Set the custommenu link color.
     if (!empty($theme->settings->menulinkcolor)) {
         $menulinkcolor = $theme->settings->menulinkcolor;
     } else {
@@ -49,7 +73,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_menulinkcolor($css, $menulinkcolor);
 
-    // Set the content link color
+    // Set the content link color.
     if (!empty($theme->settings->contentlinkcolor)) {
         $contentlinkcolor = $theme->settings->contentlinkcolor;
     } else {
@@ -57,7 +81,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_contentlinkcolor($css, $contentlinkcolor);
 
-    // Set the block link color
+    // Set the block link color.
     if (!empty($theme->settings->blocklinkcolor)) {
         $blocklinkcolor = $theme->settings->blocklinkcolor;
     } else {
@@ -65,7 +89,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_blocklinkcolor($css, $blocklinkcolor);
 
-    // Set the background image for the logo
+    // Set the background image for the logo.
     if (!empty($theme->settings->logo)) {
         $logo = $theme->settings->logo;
     } else {
@@ -73,33 +97,34 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_logo($css, $logo);
 
-    // Set the banner height
+    // Set the banner height.
     if (!empty($theme->settings->bannerheight)) {
-       $bannerheight = $theme->settings->bannerheight;
+        $bannerheight = $theme->settings->bannerheight;
     } else {
-       $bannerheight = null;
+        $bannerheight = null;
     }
-    $css = cosmic_set_bannerheight($css,$bannerheight);
+    $css = cosmic_set_bannerheight($css, $bannerheight);
 
-    // Set the screenwidth
+    // Set the screenwidth.
     if (!empty($theme->settings->screenwidth)) {
-       $screenwidth = $theme->settings->screenwidth;
+        $screenwidth = $theme->settings->screenwidth;
     } else {
-       $screenwidth = null;
+        $screenwidth = null;
     }
-    $css = cosmic_set_screenwidth($css,$screenwidth);
+    $css = cosmic_set_screenwidth($css, $screenwidth);
 
+    // Set the breadcrumb width.
     $css = cosmic_set_breadcrumbwidth($css, $theme->settings->breadcrumbwidth);
 
-    // Toggle AutoHide functionality
+    // Toggle AutoHide functionality.
     if (!empty($theme->settings->autohide)) {
-       $autohide = $theme->settings->autohide;
+        $autohide = $theme->settings->autohide;
     } else {
-       $autohide = null;
+        $autohide = null;
     }
-    //$css = cosmic_set_autohide($css,$autohide);
+    $css = cosmic_set_autohide($css, $autohide);
 
-    // Set the background image for the Banner
+    // Set the background image for the banner.
     if (!empty($theme->settings->banner)) {
         $banner = $theme->settings->banner;
     } else {
@@ -107,7 +132,7 @@ function cosmic_process_css($css, $theme) {
     }
     $css = cosmic_set_banner($css, $banner);
 
-    // Allow for additional custom CSS from admins
+    // Allow for additional custom CSS from admins.
     if (!empty($theme->settings->customcss)) {
         $customcss = $theme->settings->customcss;
     } else {
@@ -304,7 +329,8 @@ function cosmic_performance_output($param) {
  */
 class transmuted_custom_menu_item extends custom_menu_item {
     public function __construct(custom_menu_item $menunode) {
-        parent::__construct($menunode->get_text(), $menunode->get_url(), $menunode->get_title(), $menunode->get_sort_order(), $menunode->get_parent());
+        parent::__construct($menunode->get_text(), $menunode->get_url(), $menunode->get_title(),
+            $menunode->get_sort_order(), $menunode->get_parent());
         $this->children = $menunode->get_children();
 
         $matches = array();

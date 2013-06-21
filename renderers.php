@@ -1,4 +1,28 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Theme version info
+ *
+ * @package    theme
+ * @subpackage cosmic
+ * @copyright  2013 Lafayette College ITS
+ * @copyright  2012 Julian Ridden (original Rocket theme)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 class theme_cosmic_core_renderer extends core_renderer {
 
@@ -37,7 +61,8 @@ class theme_cosmic_core_renderer extends core_renderer {
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
 
             foreach ($mycourses as $mycourse) {
-                $branch->add($mycourse->shortname, new moodle_url('/course/view.php', array('id' => $mycourse->id)), $mycourse->fullname);
+                $branch->add($mycourse->shortname, new moodle_url('/course/view.php',
+                    array('id' => $mycourse->id)), $mycourse->fullname);
             }
         } else {
             switch ($mycoursetitle) {
@@ -61,20 +86,23 @@ class theme_cosmic_core_renderer extends core_renderer {
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
         }
 
-        // If the menu has no children return an empty string
+        // If the menu has no children return an empty string.
         if (!$menu->has_children()) {
             return '';
         }
 
-        // Initialise this custom menu
+        // Initialise this custom menu.
         $content = html_writer::start_tag('ul', array('class'=>'dropdown dropdown-horizontal'));
-        // Render each child
+
+        // Render each child.
         foreach ($menu->get_children() as $item) {
             $content .= $this->render_custom_menu_item($item);
         }
-        // Close the open tags
+
+        // Close the open tags.
         $content .= html_writer::end_tag('ul');
-        // Return the custom menu
+
+        // Return the custom menu.
         return $content;
     }
 
@@ -91,11 +119,11 @@ class theme_cosmic_core_renderer extends core_renderer {
      * @return string
      */
     protected function render_custom_menu_item(custom_menu_item $menunode) {
-        // Required to ensure we get unique trackable id's
+        // Required to ensure we get unique trackable id's.
         static $submenucount = 0;
         $content = html_writer::start_tag('li');
         if ($menunode->has_children()) {
-            // If the child has menus render it as a sub menu
+            // If the child has menus render it as a sub menu.
             $submenucount++;
             if ($menunode->get_url() !== null) {
                 $url = $menunode->get_url();
@@ -111,8 +139,7 @@ class theme_cosmic_core_renderer extends core_renderer {
             }
             $content .= html_writer::end_tag('ul');
         } else {
-            // The node doesn't have children so produce a final menuitem
-
+            // The node doesn't have children so produce a final menu item.
             if ($menunode->get_url() !== null) {
                 $url = $menunode->get_url();
             } else {
@@ -174,24 +201,23 @@ class theme_cosmic_core_renderer extends core_renderer {
         return $content;
     }
 
-        /**
+    /**
      * Reformat edit button to new status indicator
      */
-
-        public function edit_button(moodle_url $url) {
-
-                $edittoggle = 'enable';
+    public function edit_button(moodle_url $url) {
+        $edittoggle = 'enable';
         if (!empty($this->page->theme->settings->edittoggle)) {
             $edittoggle = $this->page->theme->settings->edittoggle;
         }
         if ($edittoggle == 'enable') {
-                        $url->param('sesskey', sesskey());
-                        $formclose ='</span><div id="editmode">'.get_string('editmode', 'theme_cosmic').'<div id="edittoggle">'.get_string('edittoggle', 'theme_cosmic').'&nbsp;</div></div>';
-                if ($this->page->user_is_editing()) {
-                                $formopen = '<span id="editbuttonon">';
-                                $url->param('edit', 'off');
-                                $editstring = get_string('turneditingoff','theme_cosmic');
-                } else {
+            $url->param('sesskey', sesskey());
+            $formclose ='</span><div id="editmode">'.get_string('editmode', 'theme_cosmic')
+                .'<div id="edittoggle">'.get_string('edittoggle', 'theme_cosmic').'&nbsp;</div></div>';
+            if ($this->page->user_is_editing()) {
+                $formopen = '<span id="editbuttonon">';
+                $url->param('edit', 'off');
+                $editstring = get_string('turneditingoff', 'theme_cosmic');
+            } else {
                 $formopen ='<span id="editbuttonoff">';
                                 $url->param('edit', 'on');
                 $editstring = get_string('turneditingon','theme_cosmic');
@@ -234,9 +260,17 @@ class theme_cosmic_core_renderer extends core_renderer {
             if (defined('MDL_PERFTOLOG') && !function_exists('register_shutdown_function')) {
                 error_log("PERF: " . $perf['txt']);
             }
-            if (defined('MDL_PERFTOFOOT') || debugging() || $CFG->perfdebug > 7) {
-                $performanceinfo = cosmic_performance_output($perf);
+            return $formopen . $this->single_button($url, $editstring) . $formclose;
+        } else {
+            $url->param('sesskey', sesskey());
+            if ($this->page->user_is_editing()) {
+                $url->param('edit', 'off');
+                $editstring = get_string('turneditingoff');
+            } else {
+                $url->param('edit', 'on');
+                $editstring = get_string('turneditingon');
             }
+            return $this->single_button($url, $editstring);
         }
 
         $perftoken = (property_exists($this, "unique_performance_info_token"))?$this->unique_performance_info_token:self::PERFORMANCE_INFO_TOKEN;

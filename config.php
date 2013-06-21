@@ -1,12 +1,36 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Theme version info
+ *
+ * @package    theme
+ * @subpackage cosmic
+ * @copyright  2013 Lafayette College ITS
+ * @copyright  2012 Julian Ridden (original Rocket theme)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 $THEME->name = 'cosmic';
 
 $THEME->parents = array('base');
 
 $THEME->sheets = array(
-    'layout',   /** Must come first: Page layout **/
-    'cosmic',   /** Must come second: default styles **/
+    'layout',
+    'cosmic',
     'menu',
     'blocks',
     'mod',
@@ -26,59 +50,59 @@ $THEME->parents_exclude_sheets = array(
 $THEME->editor_sheets = array('editor');
 
 $THEME->layouts = array(
-    // Most backwards compatible layout without the blocks - this is the layout used by default
+    // Most backwards compatible layout without the blocks - this is the layout used by default.
     'base' => array(
         'file' => 'general.php',
         'regions' => array(),
     ),
-    // Standard layout with blocks, this is recommended for most pages with default information
+    // Standard layout with blocks, this is recommended for most pages with default information.
     'standard' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre', 'side-post','search'),
+        'regions' => array('side-pre', 'side-post', 'search'),
         'defaultregion' => 'side-pre',
     ),
-    // Main course page
+    // Main course page.
     'course' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre', 'side-post','search'),
+        'regions' => array('side-pre', 'side-post', 'search'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu'=>true),
     ),
     'coursecategory' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre', 'side-post','search'),
+        'regions' => array('side-pre', 'side-post', 'search'),
         'defaultregion' => 'side-pre',
     ),
-    // part of course, typical for modules - default page layout if $cm specified in require_login()
+    // Part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre', 'side-post','search'),
+        'regions' => array('side-pre', 'side-post', 'search'),
         'defaultregion' => 'side-pre',
     ),
     // The site home page.
     'frontpage' => array(
         'file' => 'frontpage.php',
-        'regions' => array('side-pre','search','toplinks','homeblock'),
+        'regions' => array('side-pre', 'search', 'toplinks', 'homeblock'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu'=>true),
     ),
     // Server administration scripts.
     'admin' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre','search'),
+        'regions' => array('side-pre', 'search'),
         'defaultregion' => 'side-pre',
     ),
-    // My dashboard page
+    // My dashboard page.
     'mydashboard' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post', 'search'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu'=>true),
     ),
-    // My public page
+    // My public page.
     'mypublic' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre','search'),
+        'regions' => array('side-pre', 'search'),
         'defaultregion' => 'side-pre',
     ),
     'login' => array(
@@ -99,7 +123,7 @@ $THEME->layouts = array(
         'regions' => array(),
         'options' => array('nofooter'=>true),
     ),
-    // Embedded pages, like iframe/object embeded in moodleform - it needs as much space as possible
+    // Embedded pages, like iframe/object embeded in moodleform - it needs as much space as possible.
     'embedded' => array(
         'file' => 'embedded.php',
         'regions' => array()
@@ -123,108 +147,17 @@ $THEME->layouts = array(
         'file' => 'embedded.php',
         'regions' => array()
     ),
-    // The pagelayout used for reports
+    // The pagelayout used for reports.
     'report' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre','search'),
+        'regions' => array('side-pre', 'search'),
         'defaultregion' => 'side-pre',
     ),
 );
 
-///////////////////////////////////////////////////////////////
-// These are all of the possible layouts in Moodle. The
-// simplest way to do this is to keep the theme and file
-// variables the same for every layout. Including them
-// all in this way allows some flexibility down the road
-// if you want to add a different layout template to a
-// specific page.
-///////////////////////////////////////////////////////////////
-
+// Theme-specific settings; see base theme for additional options.
 $THEME->csspostprocess = 'cosmic_process_css';
-
-////////////////////////////////////////////////////
-// An array of stylesheets not to inherit from the
-// themes parents
-////////////////////////////////////////////////////
-
 $THEME->enable_dock = true;
-
-////////////////////////////////////////////////////
-// Allows the user to provide the name of a function
-// that all CSS should be passed to before being
-// delivered.
-////////////////////////////////////////////////////
-
-// $THEME->filter_mediaplugin_colors
-
-////////////////////////////////////////////////////
-// Used to control the colours used in the small
-// media player for the filters
-////////////////////////////////////////////////////
-
-//  $THEME->javascripts
-
-////////////////////////////////////////////////////
-// An array containing the names of JavaScript files
-// located in /javascript/ to include in the theme.
-// (gets included in the head)
-////////////////////////////////////////////////////
-
-// $THEME->javascripts_footer
-
-////////////////////////////////////////////////////
-// As above but will be included in the page footer.
-////////////////////////////////////////////////////
-
 $THEME->larrow = "<";
-
-////////////////////////////////////////////////////
-// Overrides the left arrow image used throughout
-// Moodle
-////////////////////////////////////////////////////
-
- $THEME->rarrow = ">";
-
-////////////////////////////////////////////////////
-// Overrides the right arrow image used throughout Moodle
-////////////////////////////////////////////////////
-
-// $THEME->layouts
-
-////////////////////////////////////////////////////
-// An array setting the layouts for the theme
-////////////////////////////////////////////////////
-
-// $THEME->parents_exclude_javascripts
-
-////////////////////////////////////////////////////
-// An array of JavaScript files NOT to inherit from
-// the themes parents
-////////////////////////////////////////////////////
-
-// $THEME->parents_exclude_sheets
-
-////////////////////////////////////////////////////
-// An array of stylesheets not to inherit from the
-// themes parents
-////////////////////////////////////////////////////
-
-// $THEME->plugins_exclude_sheets
-
-////////////////////////////////////////////////////
-// An array of plugin sheets to ignore and not
-// include.
-////////////////////////////////////////////////////
-
+$THEME->rarrow = ">";
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
-
-////////////////////////////////////////////////////
-// Sets a custom render factory to use with the
-// theme, used when working with custom renderers.
-////////////////////////////////////////////////////
-
-// $THEME->resource_mp3player_colors
-
-////////////////////////////////////////////////////
-// Controls the colours for the MP3 player
-////////////////////////////////////////////////////

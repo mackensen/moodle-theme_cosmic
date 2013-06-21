@@ -1,4 +1,28 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Theme version info
+ *
+ * @package    theme
+ * @subpackage cosmic
+ * @copyright  2013 Lafayette College ITS
+ * @copyright  2012 Julian Ridden (original Rocket theme)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 $hasheading = ($PAGE->heading);
 $hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
@@ -32,75 +56,77 @@ echo $OUTPUT->doctype() ?>
 <head>
     <title><?php echo $PAGE->title ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
-
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
-
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="page-wrapper">
-  <div id="page">
-    <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-
+    <div id="page">
+        <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
 <!-- END OF HEADER -->
-    <div id="page-content">
-       <div id="region-main-box">
-           <div id="region-post-box">
-              <div id="region-main-wrap">
-                 <div id="region-main-pad">
-                   <div id="region-main">
-                     <div class="region-content">
-                            <?php echo $OUTPUT->main_content() ?>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-
-                <?php if ($hassidepre) { ?>
-                <div id="region-pre" class="block-region">
-                   <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-                   </div>
+        <div id="page-content">
+            <div id="region-main-box">
+                <div id="region-post-box">
+                    <div id="region-main-wrap">
+                        <div id="region-main-pad">
+                            <div id="region-main">
+                                <div class="region-content">
+                                    <?php echo $OUTPUT->main_content() ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<?php
+if ($hassidepre) {
+?>
+                    <div id="region-pre" class="block-region">
+                        <div class="region-content">
+                            <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+                        </div>
+                    </div>
+<?php
+}
+if ($hassidepost) {
+?>
+                    <div id="region-post" class="block-region">
+                        <div class="region-content">
+                            <?php echo $OUTPUT->blocks_for_region('side-post') ?>
+                        </div>
+                    </div>
+<?php
+}
+?>
                 </div>
-                <?php } ?>
-
-                <?php if ($hassidepost) { ?>
-                <div id="region-post" class="block-region">
-                   <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-post') ?>
-                   </div>
-                </div>
-                <?php } ?>
             </div>
         </div>
-    </div>
-
     <!-- START OF FOOTER -->
-    <?php if ($hasfooter) { ?>
-    <div id="page-footer" class="clearfix">
-
-        <div class="footer-left">
-
-            <?php if ($hasfootnote) { ?>
-                    <div id="footnote"><?php echo $PAGE->theme->settings->footnote;?></div>
-            <?php } ?>
-
-            <a href="http://moodle.org" title="Moodle">
-                <div id="logo"></div>
-            </a>
+<?php
+if ($hasfooter) {
+?>
+        <div id="page-footer" class="clearfix">
+            <div class="footer-left">
+<?php
+    if ($hasfootnote) {
+?>
+                <div id="footnote"><?php echo $PAGE->theme->settings->footnote;?></div>
+<?php
+    }
+?>
+                <a href="http://moodle.org" title="Moodle">
+                    <div id="logo"></div>
+                </a>
+            </div>
+            <div class="footer-right">
+                <div class="copyright"><?php echo $PAGE->theme->settings->copyright; ?></div>
+                <?php echo $OUTPUT->login_info();?>
+            </div>
+            <?php echo $OUTPUT->standard_footer_html(); ?>
         </div>
-
-        <div class="footer-right">
-            <div class="copyright"><?php echo $PAGE->theme->settings->copyright; ?></div>
-                        <?php echo $OUTPUT->login_info();?>
-        </div>
-
-        <?php echo $OUTPUT->standard_footer_html(); ?>
+<?php
+}
+?>
+        <div class="clearfix"></div>
     </div>
-    <?php } ?>
-    <div class="clearfix"></div>
-</div>
-</div>
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>
