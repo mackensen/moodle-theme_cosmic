@@ -34,7 +34,7 @@ $string['region-toplinks'] = 'Top Links';
 $string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot">
 
 <h1>Cosmic</h1>
-<img src="cosmic/pix/screenshot.jpg" />
+<img src="cosmic/pix/screenshot.png" />
 
 <h2>About</h2>
 <p>Cosmic is a content-fork of the Rocket theme. It was developed by Lafayette College ITS.</p>
