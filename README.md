@@ -1,4 +1,4 @@
-# [Cosmic 2.0]
+# [Cosmic 2.1]
 
 Cosmic is a fork of the popular Rocket theme for Moodle. Cosmic was developed by Lafayette College ITS. The Rocket theme is maintained by Julian Ridden <https://github.com/moodleman/moodle-theme_rocket>.
 
