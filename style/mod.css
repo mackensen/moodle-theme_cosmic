@@ -178,3 +178,9 @@ AJAX User Enroller Panel
     border-width:0 5px 5px 0;
     z-index: 99999!important;
 }
+
+/* @group Choice */
+.path-mod-choice .horizontal .choices .option {
+    display: inline-block;
+}
+/* @end */
