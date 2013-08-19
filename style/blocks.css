@@ -431,3 +431,29 @@
     padding: 5px;
 }
 /* @end */
+
+/* @group Filtered Course List */
+.block_filtered_course_list.block .list li {
+    list-style-image: none;
+}
+
+.block_filtered_course_list.block .list li:first-child {
+    border-top-width: 0;
+}
+
+.block_filtered_course_list.block .list li {
+    border-top: 1px solid [[setting:themetrimcolor]];
+    margin: 0;
+    padding: 5px;
+}
+
+.block_filtered_course_list .course-section {
+    font-weight: bold;
+    text-align: left;
+}
+
+.block_filtered_course_list.block .footer {
+    margin-top: 4px;
+}
+
+/* @end */
