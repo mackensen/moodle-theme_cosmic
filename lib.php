@@ -317,7 +317,7 @@ function cosmic_allow_autohide($device) {
 /**
  * Generate updated custommenu with enroled courses listed
  */
-class transmuted_custom_menu_item extends custom_menu_item {
+class theme_cosmic_transmuted_custom_menu_item extends custom_menu_item {
     public function __construct(custom_menu_item $menunode) {
         parent::__construct($menunode->get_text(), $menunode->get_url(), $menunode->get_title(),
             $menunode->get_sort_order(), $menunode->get_parent());
